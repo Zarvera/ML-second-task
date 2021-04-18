@@ -1,0 +1,37 @@
+@use "./blocks/util/vars" as v;
+@use "./blocks/color-display/color-display.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {font: v.$body;}
+h1 {font: v.$h1;}
+h2 {font: v.$h2;}
+h3 {font: v.$h3;}
+
+.main-wrap {
+    padding: 145px 150px;
+}
+
+//Font-faces
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("./fonts/Montserrat/regular/Montserrat-Regular.eot");
+    src: url("./fonts/Montserrat/regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+            url("./fonts/Montserrat/regular/Montserrat-Regular.woff") format("woff"),
+            url("./fonts/Montserrat/regular/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MontserratBold";
+    src: url("./fonts/Montserrat/bold/Montserrat-Bold.eot");
+    src: url("./fonts/Montserrat/bold/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
+            url("./fonts/Montserrat/bold/Montserrat-Bold.woff") format("woff"),
+            url("./fonts/Montserrat/bold/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

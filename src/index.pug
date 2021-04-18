@@ -1,0 +1,19 @@
+include blocks/color-display/color-display
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title UI-kit
+    body
+        .main-wrap
+            .color-display-container
+                +color-display("_primary-color100", "Dark Shade 100%", "#1F2041")
+                +color-display("_primary-color75", "Dark Shade 75%", "#1F2041")
+                +color-display("_primary-color50", "Dark Shade 50%", "#1F2041")
+                +color-display("_primary-color25", "Dark Shade 25%", "#1F2041")
+                +color-display("_primary-color5", "Dark Shade 5%", "#1F2041")
+                +color-display("_accent-color", "Purple", "#BC9CFF")
+                +color-display("_selection-color", "Green", "#6FCF97")
