@@ -1,18 +1,28 @@
 @use "./blocks/util/vars" as v;
 @use "./blocks/color-display/color-display.scss";
+@use "./blocks/font-display/font-display.scss";
 
 * {
     margin: 0;
     padding: 0;
 }
 
-body {font: v.$body;}
+body {
+    font: v.$body;
+    color: v.$primary-color75;
+}
 h1 {font: v.$h1;}
 h2 {font: v.$h2;}
 h3 {font: v.$h3;}
+h1,h2,h3 {color: v.$primary-color100;}
 
 .main-wrap {
     padding: 145px 150px;
+}
+
+.types-display {
+    display: flex;
+    justify-content: space-between;
 }
 
 //Font-faces

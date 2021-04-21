@@ -1,4 +1,5 @@
 include blocks/color-display/color-display
+include blocks/font-display/font-display
 
 doctype html
 html(lang="en")
@@ -9,11 +10,17 @@ html(lang="en")
         title UI-kit
     body
         .main-wrap
-            .color-display-container
-                +color-display("_primary-color100", "Dark Shade 100%", "#1F2041")
-                +color-display("_primary-color75", "Dark Shade 75%", "#1F2041")
-                +color-display("_primary-color50", "Dark Shade 50%", "#1F2041")
-                +color-display("_primary-color25", "Dark Shade 25%", "#1F2041")
-                +color-display("_primary-color5", "Dark Shade 5%", "#1F2041")
-                +color-display("_accent-color", "Purple", "#BC9CFF")
-                +color-display("_selection-color", "Green", "#6FCF97")
+            .types-display
+                .display-container
+                    +color-display("_primary-color100", "Dark Shade 100%", "#1F2041")
+                    +color-display("_primary-color75", "Dark Shade 75%", "#1F2041")
+                    +color-display("_primary-color50", "Dark Shade 50%", "#1F2041")
+                    +color-display("_primary-color25", "Dark Shade 25%", "#1F2041")
+                    +color-display("_primary-color5", "Dark Shade 5%", "#1F2041")
+                    +color-display("_accent-color", "Purple", "#BC9CFF")
+                    +color-display("_selection-color", "Green", "#6FCF97")
+                .display-container
+                    +font-display("h1", "H1", "This one is the sub-section or widget title")
+                    +font-display("h2", "H2", "Next one is the item title inside widgets")
+                    +font-display("h3", "H3", "This is a label or CTA text")
+                    +font-display("p", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
