@@ -1,0 +1,14 @@
+@use "../util/vars" as v;
+
+.widget-wrap {
+    padding: 10px;
+    width: fit-content;
+    &__text-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+    &__description {
+        color: v.$primary-color50;
+    }
+}

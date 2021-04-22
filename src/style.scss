@@ -1,6 +1,8 @@
 @use "./blocks/util/vars" as v;
 @use "./blocks/color-display/color-display.scss";
 @use "./blocks/font-display/font-display.scss";
+@use "./blocks/text-input/text-input.scss";
+@use "./blocks/widget-wrap/widget-wrap.scss";
 
 * {
     margin: 0;

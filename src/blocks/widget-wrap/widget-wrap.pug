@@ -1,0 +1,14 @@
+mixin widget-wrap(title, optionalDescription)
+        if title && optionalDescription
+            .widget-wrap
+                .widget-wrap__text-block
+                    h3.widget-wrap__title #{title}
+                    h3.widget-wrap__description #{optionalDescription}
+                block
+        else if title
+            .widget-wrap
+                h3.widget-wrap__title #{title}
+                block 
+        else 
+            .widget-wrap 
+            block

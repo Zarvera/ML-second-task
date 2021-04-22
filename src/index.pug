@@ -1,5 +1,7 @@
 include blocks/color-display/color-display
 include blocks/font-display/font-display
+include blocks/text-input/text-input
+include blocks/widget-wrap/widget-wrap
 
 doctype html
 html(lang="en")
@@ -24,3 +26,7 @@ html(lang="en")
                     +font-display("h2", "H2", "Next one is the item title inside widgets")
                     +font-display("h3", "H3", "This is a label or CTA text")
                     +font-display("p", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+            +widget-wrap("TEXT FIELD", "DEFAULT")
+                +text-input("text", "whatever", "Email")
+            +widget-wrap("TEXT FIELD", "HOVER/FOCUS")
+                +text-input("text", "whatever", "This is pretty awesome")
