@@ -1,4 +1,8 @@
-mixin font-display(tag, tagstring, description)
+mixin font-display(tag, tagString, description)
     .font-display
-        #{tag}(class="font-display__tag-string tag-string_shaded") #{tagstring}
-        #{tag}(class="font-display__description") #{description}
+        #{tag}(class='font-display__tag-string tag-string_shaded') #{tagString}
+        #{tag}(class='font-display__description') #{description}
+//-
+    'tag' is an HTML tag to to wrap the 'tagString' in.
+    'tagString' is a text string to be wrapped in the provided 'tag'.
+    'description' is same as 'tagString'.

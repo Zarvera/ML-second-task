@@ -1,8 +1,8 @@
-@use "./blocks/util/vars" as v;
-@use "./blocks/color-display/color-display.scss";
-@use "./blocks/font-display/font-display.scss";
-@use "./blocks/text-input/text-input.scss";
-@use "./blocks/widget-wrap/widget-wrap.scss";
+@use './blocks/util/vars' as v;
+@use './blocks/color-display/color-display.scss';
+@use './blocks/font-display/font-display.scss';
+@use './blocks/text-input/text-input.scss';
+@use './blocks/widget-wrap/widget-wrap.scss';
 
 * {
     margin: 0;
@@ -27,23 +27,23 @@ h1,h2,h3 {color: v.$primary-color100;}
     justify-content: space-between;
 }
 
-//Font-faces
+//-Font-faces
 @font-face {
-    font-family: "MontserratRegular";
-    src: url("./fonts/Montserrat/regular/Montserrat-Regular.eot");
-    src: url("./fonts/Montserrat/regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
-            url("./fonts/Montserrat/regular/Montserrat-Regular.woff") format("woff"),
-            url("./fonts/Montserrat/regular/Montserrat-Regular.ttf") format("truetype");
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/regular/Montserrat-Regular.eot');
+    src: url('./fonts/Montserrat/regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/Montserrat/regular/Montserrat-Regular.woff') format('woff'),
+            url('./fonts/Montserrat/regular/Montserrat-Regular.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: "MontserratBold";
-    src: url("./fonts/Montserrat/bold/Montserrat-Bold.eot");
-    src: url("./fonts/Montserrat/bold/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
-            url("./fonts/Montserrat/bold/Montserrat-Bold.woff") format("woff"),
-            url("./fonts/Montserrat/bold/Montserrat-Bold.ttf") format("truetype");
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/bold/Montserrat-Bold.eot');
+    src: url('./fonts/Montserrat/bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/Montserrat/bold/Montserrat-Bold.woff') format('woff'),
+            url('./fonts/Montserrat/bold/Montserrat-Bold.ttf') format('truetype');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 700;
 }

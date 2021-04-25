@@ -1,9 +1,8 @@
-@use "../util/vars" as v;
+@use '../util/vars' as v;
 
 .text-input {
     width: 320px;
-    height: 44px;
-    padding: 0 15px;
+    padding: 12px 15px;
     border: 1px solid v.$primary-color25;
     border-radius: 4px;
     outline: none;

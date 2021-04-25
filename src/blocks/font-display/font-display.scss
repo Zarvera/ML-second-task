@@ -1,4 +1,4 @@
-@use "../util/vars" as v;
+@use '../util/vars' as v;
 
 .font-display {
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .tag-string {
-    font-family: "MontserratRegular";
+    font-family: 'Montserrat';
     text-align: right;
     width: 37px;
     &_shaded {
