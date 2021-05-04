@@ -17,6 +17,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.pug'
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
     ],
     module: {
         rules: [

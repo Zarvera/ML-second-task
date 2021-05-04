@@ -2,6 +2,7 @@ include blocks/color-display/color-display
 include blocks/font-display/font-display
 include blocks/text-input/text-input
 include blocks/widget-wrap/widget-wrap
+include blocks/dropdown/dropdown
 
 doctype html
 html(lang='en')
@@ -30,3 +31,4 @@ html(lang='en')
                 +text-input('text', 'whatever', 'Email')
             +widget-wrap('text field', 'hover/focus')
                 +text-input('text', 'whatever')
+            +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'сколько гостей')

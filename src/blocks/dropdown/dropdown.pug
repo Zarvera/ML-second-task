@@ -1,0 +1,10 @@
+mixin dropdown(options, placeholder)
+    .dropdown
+        input(type='text' name='guests' placeholder=placeholder class='dropdown__menu' readonly)
+        each option in options
+            div(class='dropdown__menu-option')
+                h3 #{option}
+                div(class='menu-option__stepper')
+                    button(type='button' class='menu-option__stepper-button button_decrement') -
+                    h3(class='menu-option__stepper-result') 0
+                    button(type='button' class='menu-option__stepper-button button_increment') +
