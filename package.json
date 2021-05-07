@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/Zarvera/ML-second-task#readme",
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "css-loader": "^5.2.2",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.5.0",
+    "postcss-loader": "^5.2.0",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass": "^1.32.10",

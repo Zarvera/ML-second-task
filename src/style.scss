@@ -10,10 +10,11 @@
     padding: 0;
 }
 
-body {
+body,input {
     font: v.$body;
     color: v.$primary-color75;
 }
+
 h1 {font: v.$h1;}
 h2 {font: v.$h2;}
 h3 {font: v.$h3;}

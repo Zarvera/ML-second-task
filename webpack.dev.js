@@ -18,8 +18,22 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.(sc|c)ss$/i,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    require('autoprefixer')
+                                ],
+                            },
+                        },
+                    },
+                    'sass-loader'
+                ],
             },
-        ]
-    }
+        ],
+    },
 });
