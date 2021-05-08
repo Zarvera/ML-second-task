@@ -4,6 +4,7 @@ include blocks/text-input/text-input
 include blocks/widget-wrap/widget-wrap
 include blocks/dropdown/dropdown
 include blocks/masked-input/masked-input
+include blocks/datepicker/datepicker
 
 doctype html
 html(lang='en')
@@ -36,3 +37,5 @@ html(lang='en')
                 +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
             +widget-wrap('masked text field')
                 +masked-input('text', 'whatever', 'ДД.ММ.ГГГГ')
+            +widget-wrap('date dropdown')
+                +datepicker
