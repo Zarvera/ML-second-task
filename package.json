@@ -36,6 +36,7 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1"
   }

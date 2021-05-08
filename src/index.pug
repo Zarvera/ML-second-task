@@ -3,6 +3,7 @@ include blocks/font-display/font-display
 include blocks/text-input/text-input
 include blocks/widget-wrap/widget-wrap
 include blocks/dropdown/dropdown
+include blocks/masked-input/masked-input
 
 doctype html
 html(lang='en')
@@ -31,4 +32,7 @@ html(lang='en')
                 +text-input('text', 'whatever', 'Email')
             +widget-wrap('text field', 'hover/focus')
                 +text-input('text', 'whatever')
-            +dropdown({'bedroom':'спальни', 'bed':'кровати', 'bathroom':'ванные комнаты'}, 'Сколько гостей')
+            +widget-wrap('dropdown')
+                +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
+            +widget-wrap('masked text field')
+                +masked-input('text', 'whatever', 'ДД.ММ.ГГГГ')
