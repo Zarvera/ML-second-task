@@ -1,0 +1,4 @@
+mixin fieldset(attr)
+    fieldset(class='fieldset' + ' fieldset' + attr.modifier)
+        legend.legend #{attr.title}
+        block

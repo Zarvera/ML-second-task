@@ -1,0 +1,22 @@
+@use '../util/vars' as v;
+
+.fieldset {
+    border: none;
+    &_size_tiny {
+        width: 150px;
+    }
+    &_size_small {
+        width: 266px;
+    }
+    &_size_normal {
+        width: 320px;
+    }
+}
+
+.legend {
+    font: v.$h3;
+    color: v.$primary-color100;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-bottom: 5px;
+}

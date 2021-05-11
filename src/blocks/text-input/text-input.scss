@@ -1,13 +1,17 @@
 @use '../util/vars' as v;
 
 .text-input {
-    width: 320px;
+    width: 100%;
+    box-sizing: border-box;
     padding: 12px 15px;
     border: 1px solid v.$primary-color25;
     border-radius: 4px;
     outline: none;
     font: v.$body;
     color: v.$primary-color25;
+    &::placeholder {
+        color: v.$primary-color25;
+    }
     &:hover,&:focus,&:active {
         border: 1px solid v.$primary-color50;
         color: v.$primary-color75;

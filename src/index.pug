@@ -1,9 +1,9 @@
 include blocks/color-display/color-display
 include blocks/font-display/font-display
+include blocks/fieldset/fieldset
 include blocks/text-input/text-input
-include blocks/widget-wrap/widget-wrap
-include blocks/dropdown/dropdown
 include blocks/masked-input/masked-input
+include blocks/dropdown/dropdown
 include blocks/datepicker/datepicker
 
 doctype html
@@ -29,13 +29,15 @@ html(lang='en')
                     +font-display('h2', 'H2', 'Next one is the item title inside widgets')
                     +font-display('h3', 'H3', 'This is a label or CTA text')
                     +font-display('p', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
-            +widget-wrap('text field', 'default')
-                +text-input('text', 'whatever', 'Email')
-            +widget-wrap('text field', 'hover/focus')
-                +text-input('text', 'whatever')
-            +widget-wrap('dropdown')
+            +fieldset({title: 'text field', modifier: '_size_normal'})
+                +text-input({type: 'text', placeholder: 'Email'})
+            +fieldset({title: 'text field', modifier: '_size_normal'})
+                +text-input({type: 'text'})
+            +fieldset({title: 'dropdown', modifier: '_size_normal'})
                 +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
-            +widget-wrap('masked text field')
-                +masked-input('text', 'whatever', 'ДД.ММ.ГГГГ')
-            +widget-wrap('date dropdown')
+            +fieldset({title: 'masked text field', modifier: '_size_normal'})
+                +masked-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
+            +fieldset({title: 'date dropdown', modifier: '_size_normal'})
                 +datepicker
+            +fieldset({title: 'fieldset text', modifier: '_size_normal'})
+                +masked-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
