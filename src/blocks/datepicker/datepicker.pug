@@ -1,3 +1,2 @@
-mixin datepicker
-    input(type='text' data-range="true" data-multiple-dates-separator=" - " placeholder='ДД.ММ.ГГГГ' class='my-datepicker datepicker-from')
-    input(type='text' data-range="true" data-multiple-dates-separator=" - " placeholder='ДД.ММ.ГГГГ' class='my-datepicker datepicker-to')
+mixin datepicker(point)
+    input(type='text' data-range="true" data-multiple-dates-separator=" - " placeholder='ДД.ММ.ГГГГ' class='my-datepicker datepicker__field_' + point)
