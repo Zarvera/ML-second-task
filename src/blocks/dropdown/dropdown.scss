@@ -1,6 +1,8 @@
 @use '../util/vars' as v;
 
 .dropdown {
+    height: 100%;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid v.$primary-color25;
@@ -9,6 +11,15 @@
         border-color: v.$primary-color50;
         color: v.$primary-color75;
     }
+}
+
+.dropdown__expand-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: inherit;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown__menu {

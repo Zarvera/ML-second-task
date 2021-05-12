@@ -1,5 +1,5 @@
 const dropdown = function(options) {
-    $('.dropdown__menu').on('click', function() {
+    $('.dropdown__menu, dropdown__expand-icon').on('click', function() {
         $(this).siblings('.dropdown__menu-option').toggleClass('dropdown__menu-option_open');
     });
 
