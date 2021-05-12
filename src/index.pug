@@ -1,10 +1,12 @@
 include blocks/color-display/color-display
 include blocks/font-display/font-display
+include blocks/form/form
 include blocks/fieldset/fieldset
 include blocks/text-input/text-input
 include blocks/masked-input/masked-input
 include blocks/dropdown/dropdown
 include blocks/datepicker/datepicker
+include blocks/date-filter/date-filter
 
 doctype html
 html(lang='en')
@@ -29,15 +31,18 @@ html(lang='en')
                     +font-display('h2', 'H2', 'Next one is the item title inside widgets')
                     +font-display('h3', 'H3', 'This is a label or CTA text')
                     +font-display('p', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
-            +fieldset({title: 'text field', modifier: '_size_normal'})
+            +fieldset({title: 'text field', size: '_size_normal'})
                 +text-input({type: 'text', placeholder: 'Email'})
-            +fieldset({title: 'text field', modifier: '_size_normal'})
+            +fieldset({title: 'text field', size: '_size_normal'})
                 +text-input({type: 'text'})
-            +fieldset({title: 'dropdown', modifier: '_size_normal'})
+            +fieldset({title: 'dropdown', size: '_size_normal'})
                 +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
-            +fieldset({title: 'masked text field', modifier: '_size_normal'})
+            +fieldset({title: 'masked text field', size: '_size_normal'})
                 +masked-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
-            +fieldset({title: 'date dropdown', modifier: '_size_normal'})
-                +datepicker
-            +fieldset({title: 'fieldset text', modifier: '_size_normal'})
-                +masked-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
+            +form
+                +fieldset({title: 'date dropdown', size: '_size_tiny'})
+                    +datepicker('from')
+                +fieldset({title: 'date dropdown', size: '_size_tiny', margin: true})
+                    +datepicker('to')
+            +fieldset({title: 'filter date dropdown', size: '_size_small'})
+                +date-filter

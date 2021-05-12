@@ -1,4 +1,4 @@
 mixin fieldset(attr)
-    fieldset(class='fieldset' + ' fieldset' + attr.modifier)
+    fieldset(class=attr.margin ? 'fieldset' + ' fieldset' + attr.size + ' fieldset_margin_left' : 'fieldset' + ' fieldset' + attr.size)
         legend.legend #{attr.title}
         block
