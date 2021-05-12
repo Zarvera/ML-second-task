@@ -13,4 +13,7 @@
         border: 1px solid v.$primary-color50;
         color: v.$primary-color75;
     }
+    &::placeholder {
+        color: v.$primary-color25;
+    }
 }
