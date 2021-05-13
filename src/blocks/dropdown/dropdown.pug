@@ -1,7 +1,7 @@
 mixin dropdown(options, placeholder)
     .dropdown
         input(type='text' name='guests' placeholder=placeholder class='dropdown__menu' readonly)
-        div(class='material-icons dropdown__expand-icon') expand_more
+        span(class='material-icons dropdown__expand-icon') expand_more
         each val, index in options
             div(class='dropdown__menu-option')
                 h3 #{val}

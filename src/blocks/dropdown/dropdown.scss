@@ -15,11 +15,9 @@
 
 .dropdown__expand-icon {
     position: absolute;
-    top: 0;
-    right: 0;
-    height: inherit;
-    display: flex;
-    align-items: center;
+    top: 8px;
+    right: 10px;
+    color: v.$primary-color50;
 }
 
 .dropdown__menu {
