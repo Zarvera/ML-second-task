@@ -1,2 +1,2 @@
 mixin text-input(attr)
-    input&attributes(attr)(class='text-input')
+    input(type=attr.type, placeholder=attr.placeholder)(class='text-input', class=(attr.mod==='mask' ? 'text-input_masked' : ''))
