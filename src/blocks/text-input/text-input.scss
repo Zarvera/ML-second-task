@@ -1,5 +1,9 @@
 @use '../util/vars' as v;
 
+.text-input__flex-wrap {
+  display: flex;
+}
+
 .text-input {
     width: 100%;
     box-sizing: border-box;
@@ -16,4 +20,18 @@
         border: 1px solid v.$primary-color50;
         color: v.$primary-color75;
     }
+    &_with-button {
+      @extend .text-input;
+      padding-right: 44px;
+    }
+}
+
+.text-input__submit-button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  color: v.$accent-color;
+  background-color: transparent;
+  width: 44px;
+  margin-left: -44px;
 }
