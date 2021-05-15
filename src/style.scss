@@ -6,6 +6,7 @@
 @use './blocks/text-input/text-input.scss';
 @use './blocks/dropdown/dropdown.scss';
 @use './blocks/datepicker/datepicker.scss';
+@use './blocks/checkbox/checkbox.scss';
 
 * {
     margin: 0;
@@ -61,27 +62,27 @@ h1,h2,h3 {color: v.$primary-color100;}
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Montserrat/regular/Montserrat-Regular.eot');
-    src: url('./fonts/Montserrat/regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/Montserrat/regular/Montserrat-Regular.woff') format('woff'),
-            url('./fonts/Montserrat/regular/Montserrat-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Montserrat/regular/Montserrat-Regular.eot');
+    src: url('./assets/fonts/Montserrat/regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+            url('./assets/fonts/Montserrat/regular/Montserrat-Regular.woff') format('woff'),
+            url('./assets/fonts/Montserrat/regular/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('./fonts/Montserrat/bold/Montserrat-Bold.eot');
-    src: url('./fonts/Montserrat/bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-            url('./fonts/Montserrat/bold/Montserrat-Bold.woff') format('woff'),
-            url('./fonts/Montserrat/bold/Montserrat-Bold.ttf') format('truetype');
+    src: url('./assets/fonts/Montserrat/bold/Montserrat-Bold.eot');
+    src: url('./assets/fonts/Montserrat/bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+            url('./assets/fonts/Montserrat/bold/Montserrat-Bold.woff') format('woff'),
+            url('./assets/fonts/Montserrat/bold/Montserrat-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/MaterialIcons/MaterialIcons-Regular.eot'); /* For IE6-8 */
-    src: url('./fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'),
-            url('./fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'),
+            url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype');
   }

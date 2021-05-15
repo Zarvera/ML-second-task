@@ -1,0 +1,5 @@
+mixin checkbox(attr)
+  each val, key in attr
+    .checkbox
+      input(type="checkbox", id=val.id, name=val.name, class='checkbox__box' checked=(val.checked===true ? true : false))
+      label(for=val.id ,class='checkbox__label') #{key}

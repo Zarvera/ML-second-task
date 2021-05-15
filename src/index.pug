@@ -6,6 +6,7 @@ include blocks/text-input/text-input
 include blocks/dropdown/dropdown
 include blocks/datepicker/datepicker
 include blocks/date-filter/date-filter
+include blocks/checkbox/checkbox
 
 doctype html
 html(lang='en')
@@ -47,3 +48,7 @@ html(lang='en')
         +date-filter
       +fieldset({title: 'subscription text field', size: '_size_small'})
         +text-input({type: 'email', mod: 'subscription'})
+      +fieldset({title: 'checkbox buttons'})
+        +checkbox({'Можно курить': {id: 'smoke', name: 'smoke'}})
+        +checkbox({'Можно с питомцами': {id: 'pets', name: 'pets', checked: true}})
+        +checkbox({'Можно пригласить гостей (до 10 человек)': {id: 'allow-guests', name: 'allow-guests', checked: true}})

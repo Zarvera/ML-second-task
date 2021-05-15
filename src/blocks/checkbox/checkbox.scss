@@ -1,0 +1,41 @@
+@use '../util/vars' as v;
+
+.checkbox {
+  margin-top: 10px;;
+}
+
+.checkbox__label {
+  color: v.$primary-color50;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid v.$primary-color25;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+}
+
+.checkbox__box {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &:checked+.checkbox__label::before {
+    background-image: url('./assets/svg/check.svg');
+    border-color: v.$accent-color;
+  }
+  &:not(:disabled)+.checkbox__label:hover::before,
+  &:not(:disabled)+.checkbox__label:active::before,
+  &:not(:disabled)+.checkbox__label:focus::before {
+    border-color: v.$accent-color;
+  }
+
+}
