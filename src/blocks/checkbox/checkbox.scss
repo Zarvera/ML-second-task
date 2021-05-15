@@ -26,6 +26,40 @@
   }
 }
 
+.checkbox__label_type_toggler {
+  color: v.$primary-color75;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid v.$primary-color25;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  &::after {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: v.$primary-color25;
+    border-radius: 50%;
+    transition: background 0.3s, left 0.3s;
+  }
+}
+
 .checkbox__box {
   position: absolute;
   z-index: -1;
@@ -37,6 +71,25 @@
   &:not(:disabled)+.checkbox__label:hover::before,
   &:not(:disabled)+.checkbox__label:active::before,
   &:not(:disabled)+.checkbox__label:focus::before {
+    border-color: v.$accent-color;
+  }
+
+}
+
+.checkbox__box_shape_oval {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &:checked+.checkbox__label_type_toggler::before {
+    border-color: v.$accent-color;
+  }
+  &:checked+.checkbox__label_type_toggler::after {
+    left: 26px;
+    background: v.$accent-gradient;
+  }
+  &:not(:disabled)+.checkbox__label_type_toggler:hover::before,
+  &:not(:disabled)+.checkbox__label_type_toggler:active::before,
+  &:not(:disabled)+.checkbox__label_type_toggler:focus::before {
     border-color: v.$accent-color;
   }
 
