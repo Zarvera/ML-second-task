@@ -7,6 +7,7 @@ include blocks/dropdown/dropdown
 include blocks/datepicker/datepicker
 include blocks/date-filter/date-filter
 include blocks/checkbox/checkbox
+include blocks/radio-button/radio-button
 
 doctype html
 html(lang='en')
@@ -52,6 +53,9 @@ html(lang='en')
         +checkbox({'Можно курить': {id: 'smoke', name: 'smoke'}})
         +checkbox({'Можно с питомцами': {id: 'pets', name: 'pets', checked: true}})
         +checkbox({'Можно пригласить гостей (до 10 человек)': {id: 'allow-guests', name: 'allow-guests', checked: true}})
+      +fieldset({title: 'radio buttons'})
+        +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
+        +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
       +fieldset({title: 'toggle'})
         +checkbox({'Получать спецпредложения': {id: 'deals', name: 'deals', mod: 'toggle', checked: true}})
         +checkbox({'Получать спецпредложения': {id: 'deals2', name: 'deals', mod: 'toggle'}})

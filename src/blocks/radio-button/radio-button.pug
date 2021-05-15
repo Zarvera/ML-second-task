@@ -1,0 +1,4 @@
+mixin radio-button(attr)
+  .radio-button
+    input(type="radio", id=attr.id , name=attr.name, class='radio-button__button', checked=(attr.checked===true ? true : false))
+    label(for=attr.id, class='radio-button__label') #{attr.label}
