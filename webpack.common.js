@@ -29,12 +29,19 @@ module.exports = {
                 loader: "pug-loader",
             },
             {
-                test: /\.(woff|eot|ttf|otf|svg)$/i,
+                test: /\.(woff|eot|ttf|otf)$/i,
                 type: "asset/resource",
                 generator: {
-                    filename: 'fonts/[name]/[name][ext]'
+                    filename: 'assets/fonts/[name]/[name][ext]'
                 },
             },
+            {
+              test: /\.svg$/i,
+              type: "asset/resource",
+              generator: {
+                  filename: 'assets/svg/[name][ext]'
+              },
+          },
         ]
     },
 };
