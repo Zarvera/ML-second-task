@@ -8,6 +8,7 @@ include blocks/datepicker/datepicker
 include blocks/date-filter/date-filter
 include blocks/checkbox/checkbox
 include blocks/radio-button/radio-button
+include blocks/like-button/like-button
 
 doctype html
 html(lang='en')
@@ -59,3 +60,6 @@ html(lang='en')
       +fieldset({title: 'toggle'})
         +checkbox({'Получать спецпредложения': {id: 'deals', name: 'deals', mod: 'toggle', checked: true}})
         +checkbox({'Получать спецпредложения': {id: 'deals2', name: 'deals', mod: 'toggle'}})
+      +fieldset({title: 'like button'})
+        +like-button({value: '2'})
+        +like-button({id: 'like-inited', value: '11'})
