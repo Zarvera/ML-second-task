@@ -25,13 +25,43 @@ h2 {font: v.$h2;}
 h3 {font: v.$h3;}
 h1,h2,h3 {color: v.$primary-color100;}
 
+//Костыли и обёртки для ui-kit
 .main-wrap {
     padding: 145px 150px;
 }
 
-.types-display {
+.colors-and-types {
     display: flex;
-    justify-content: space-between;
+}
+
+.display-container:nth-child(2) {
+  margin-left: 415px;
+  width: 436px;
+}
+
+.form-elements {
+  margin-top: 335px;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.text-input-wrap>fieldset {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &:nth-last-child(2) {
+    margin-bottom: 19px;
+  }
+}
+
+.dropdown-wrap {
+  margin-top: 36px;
+  &>form, >fieldset:not(:last-child) {
+    margin-bottom: 37px;
+  }
 }
 
 //Material Icons rules

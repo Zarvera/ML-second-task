@@ -19,7 +19,7 @@ html(lang='en')
     title UI-kit
   body
     .main-wrap
-      .types-display
+      .colors-and-types
         .display-container
           +color-display('_primary-color100', 'Dark Shade 100%', '#1F2041')
           +color-display('_primary-color75', 'Dark Shade 75%', '#1F2041')
@@ -31,35 +31,42 @@ html(lang='en')
         .display-container
           +font-display('h1', 'H1', 'This one is the sub-section or widget title')
           +font-display('h2', 'H2', 'Next one is the item title inside widgets')
-          +font-display('h3', 'H3', 'This is a label or CTA text')
+          +font-display('h3', 'H3', 'THIS IS A LABEL CTA TEXT')
           +font-display('p', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
-      +fieldset({title: 'text field', size: '_size_normal'})
-        +text-input({type: 'text', placeholder: 'Email'})
-      +fieldset({title: 'text field', size: '_size_normal'})
-        +text-input({type: 'text'})
-      +fieldset({title: 'dropdown', size: '_size_normal'})
-        +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
-      +fieldset({title: 'masked text field', size: '_size_normal'})
-        +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', mod: 'mask'})
-      +form
-        +fieldset({title: 'date dropdown', size: '_size_tiny'})
-          +datepicker('from')
-        +fieldset({title: 'date dropdown', size: '_size_tiny', margin: true})
-          +datepicker('to')
-      +fieldset({title: 'filter date dropdown', size: '_size_small'})
-        +date-filter
-      +fieldset({title: 'subscription text field', size: '_size_small'})
-        +text-input({type: 'email', mod: 'subscription'})
-      +fieldset({title: 'checkbox buttons'})
-        +checkbox({'Можно курить': {id: 'smoke', name: 'smoke'}})
-        +checkbox({'Можно с питомцами': {id: 'pets', name: 'pets', checked: true}})
-        +checkbox({'Можно пригласить гостей (до 10 человек)': {id: 'allow-guests', name: 'allow-guests', checked: true}})
-      +fieldset({title: 'radio buttons'})
-        +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
-        +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
-      +fieldset({title: 'toggle'})
-        +checkbox({'Получать спецпредложения': {id: 'deals', name: 'deals', mod: 'toggle', checked: true}})
-        +checkbox({'Получать спецпредложения': {id: 'deals2', name: 'deals', mod: 'toggle'}})
-      +fieldset({title: 'like button'})
-        +like-button({value: '2'})
-        +like-button({id: 'like-inited', value: '11'})
+      .form-elements
+        .grid-wrap
+          .grid-wrap-column
+            .text-input-wrap
+              +fieldset({title: 'text field', size: '_size_normal'})
+                +text-input({type: 'text', placeholder: 'Email'})
+              +fieldset({title: 'text field', size: '_size_normal'})
+                +text-input({type: 'text'})
+              +fieldset({title: 'dropdown', size: '_size_normal'})
+                +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
+              +fieldset({title: 'masked text field', size: '_size_normal'})
+                +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', mod: 'mask'})
+            .dropdown-wrap
+              +form
+                +fieldset({title: 'date dropdown', size: '_size_tiny'})
+                  +datepicker('from')
+                +fieldset({title: 'date dropdown', size: '_size_tiny', margin: true})
+                  +datepicker('to')
+              +fieldset({title: 'filter date dropdown', size: '_size_small'})
+                +date-filter
+              +fieldset({title: 'subscription text field', size: '_size_small'})
+                +text-input({type: 'email', mod: 'subscription'})
+          .grid-wrap-column
+            +fieldset({title: 'checkbox buttons'})
+              +checkbox({'Можно курить': {id: 'smoke', name: 'smoke'}})
+              +checkbox({'Можно с питомцами': {id: 'pets', name: 'pets', checked: true}})
+              +checkbox({'Можно пригласить гостей (до 10 человек)': {id: 'allow-guests', name: 'allow-guests', checked: true}})
+            +fieldset({title: 'radio buttons'})
+              +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
+              +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
+            +fieldset({title: 'toggle'})
+              +checkbox({'Получать спецпредложения': {id: 'deals', name: 'deals', mod: 'toggle', checked: true}})
+              +checkbox({'Получать спецпредложения': {id: 'deals2', name: 'deals', mod: 'toggle'}})
+            +fieldset({title: 'like button'})
+              +like-button({value: '2'})
+              +like-button({id: 'like-inited', value: '11'})
+          .grid-wrap-column

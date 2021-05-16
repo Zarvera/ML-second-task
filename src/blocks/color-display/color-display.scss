@@ -10,6 +10,10 @@
     }
     &__text-block {
         margin-left: 40px;
+        padding: 5px 0 4px 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
     }
     &__color-code {
         font: v.$code;
