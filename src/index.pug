@@ -9,6 +9,7 @@ include blocks/date-filter/date-filter
 include blocks/checkbox/checkbox
 include blocks/radio-button/radio-button
 include blocks/like-button/like-button
+include blocks/rate-button/rate-button
 
 doctype html
 html(lang='en')
@@ -69,4 +70,6 @@ html(lang='en')
             +fieldset({title: 'like button'})
               +like-button({value: '2'})
               +like-button({id: 'like-inited', value: '11'})
+            +fieldset({title: 'rate button'})
+              +rate-button
           .grid-wrap-column
