@@ -1,0 +1,82 @@
+@use '../util/vars' as v;
+
+.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font: v.$h3;
+  color: v.$accent-color;
+  appearance: none;
+  border: none;
+  background: transparent;
+  transition: color 0.4s;
+  &:hover,&:focus,&:active,&_state_hovered {
+    color: v.$primary-color50;
+  }
+}
+
+.button_style_border {
+  cursor: pointer;
+  text-transform: uppercase;
+  font: v.$h3;
+  color: v.$accent-color;
+  appearance: none;
+  background:
+    linear-gradient(#FFF, #FFF) padding-box,
+    v.$accent-gradient border-box;
+  border: 2px solid transparent;
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  transition: opacity 0.4s;
+  &:hover,&:focus,&:active,&_state_hovered {
+    opacity: 0.5;
+  }
+}
+
+.button_style_filled {
+  cursor: pointer;
+  text-transform: uppercase;
+  font: v.$h3;
+  color: #FFFFFF;
+  appearance: none;
+  border: none;
+  background: v.$accent-gradient;  
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  transition: opacity 0.4s;
+  &:hover,&:focus,&:active,&_state_hovered {
+    opacity: 0.5;
+  }
+}
+
+.button_style_form-submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 44px;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font: v.$h3;
+  color: #FFFFFF;
+  appearance: none;
+  border: none;
+  background: v.$accent-gradient;  
+  border-radius: 22px;
+  transition: opacity 0.4s;
+  padding: 0 20px;
+  &::after {
+    position: absolute;
+    right: 18px;
+    content: 'arrow_forward';
+    font-family: 'Material Icons';
+    text-transform: none;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 15px;
+  }
+  &:hover,&:focus,&:active,&_state_hovered {
+    opacity: 0.5;
+  }
+}

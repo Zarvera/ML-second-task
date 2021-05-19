@@ -1,0 +1,13 @@
+mixin button(attr)
+  -
+    let classname;
+    if(attr.style==='filled') {
+      classname = 'button_style_filled';
+    } else if(attr.style==='border') {
+      classname = 'button_style_border';
+    } else if(attr.style==='submit') {
+      classname = 'button_style_form-submit';
+    } else {
+      classname = 'button';
+    }
+  button(type=attr.type, class=classname) #{attr.value}

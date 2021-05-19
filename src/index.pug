@@ -11,6 +11,7 @@ include blocks/radio-button/radio-button
 include blocks/like-button/like-button
 include blocks/rate-button/rate-button
 include blocks/range-slider/range-slider
+include blocks/button/button
 
 doctype html
 html(lang='en')
@@ -76,3 +77,8 @@ html(lang='en')
           .grid-wrap-column
             +fieldset({title: 'range slider'})
               +range-slider
+            +fieldset({title: 'buttons'})
+              +button({type: 'button', value: 'click me', style: 'filled'})
+              +button({type: 'button', value: 'click me', style: 'border'})
+              +button({type: 'button', value: 'click me'})
+              +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
