@@ -1,0 +1,31 @@
+@use '../util/vars' as v;
+
+.noUi-target:not(.specifity-increase) {
+  border-radius: 3px;
+  border: 1px solid v.$primary-color25;
+  box-shadow: none;
+}
+
+.noUi-horizontal:not(.specifity-increase) {
+  height: 6px;
+}
+
+.noUi-connect:not(.specifity-increase) {
+  background: v.$selection-gradient;
+}
+
+.noUi-horizontal .noUi-handle:not(.specifity-increase) {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  background: v.$selection-gradient;
+  box-shadow: none;
+  right: -12px;
+  top: -5px;
+}
+
+.noUi-handle:not(.specifity-increase)::before, .noUi-handle:not(.specifity-increase)::after {
+  content: none;
+  display: none;
+}

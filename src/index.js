@@ -5,6 +5,7 @@ import './blocks/datepicker/datepicker';
 import './blocks/date-filter/date-filter';
 import './blocks/like-button/like-button';
 import './blocks/rate-button/rate-button';
+import './blocks/range-slider/range-slider';
 
 
 (function() {

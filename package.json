@@ -38,6 +38,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "jquery": "^3.6.0",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "nouislider": "^15.1.0"
   }
 }
