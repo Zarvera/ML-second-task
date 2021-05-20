@@ -1,0 +1,58 @@
+@use '../util/vars' as v;
+
+.page-link,
+.current {
+  font: v.$h3;
+}
+
+.demo-pag>ul>li>span,
+.demo-pag>ul>li>a {
+  min-height: 40px;
+  min-width: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-pag>ul>li>a {
+  background: none;
+  box-shadow: none;
+  border: none;
+  text-decoration-line: none;
+}
+
+li.active>.current {
+  background: v.$accent-gradient;
+  border-radius: 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.page-link:not(.specifity-increase) {
+  color: v.$primary-color50;
+}
+
+.page-link.prev:not(.specifity-increase),
+.page-link.next:not(.specifity-increase) {
+  font-family: 'Material Icons';
+  text-transform: none;
+  background: v.$selection-gradient;
+  border-radius: 22px;
+  border: none;
+  box-shadow: none;
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+  transition: opacity 0.4s;
+  &:hover,:active,:focus {
+    @extend .page-link, .next;
+    opacity: 0.5;
+    color: #FFFFFF;
+  }
+}
+
+.current.prev,
+.current.next {
+  display: none;
+}

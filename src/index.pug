@@ -12,6 +12,7 @@ include blocks/like-button/like-button
 include blocks/rate-button/rate-button
 include blocks/range-slider/range-slider
 include blocks/button/button
+include blocks/pagination/pagination
 
 doctype html
 html(lang='en')
@@ -82,3 +83,7 @@ html(lang='en')
               +button({type: 'button', value: 'click me', style: 'border'})
               +button({type: 'button', value: 'click me'})
               +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
+            +fieldset({title: 'pagination'})
+              +pagination
+        .inited-dropdowns-wrap 
+            
