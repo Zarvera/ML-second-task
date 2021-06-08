@@ -1,6 +1,7 @@
 @use '../util/vars' as v;
 
 .like-button {
+  box-sizing: border-box;
   width: 40px;
   height: 20px;
   border: 1px solid v.$primary-color25;
@@ -26,4 +27,9 @@
 
 .like-button__symbol.material-icons {
   font-size: 10px;
+}
+
+.like-button__value {
+  font-size: 10px;
+  align-self: center;
 }

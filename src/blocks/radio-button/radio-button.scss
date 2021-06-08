@@ -1,7 +1,7 @@
 @use '../util/vars' as v;
 
 .radio-button {
-  margin-top: 10px;
+  display: flex;
 }
 
 .radio-button__label {
@@ -14,8 +14,8 @@
     content: '';
     cursor: pointer;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
     flex-grow: 0;
     border: 1px solid v.$primary-color25;
@@ -44,7 +44,7 @@
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    left: 5px;
+    left: 4px;
     background: v.$accent-gradient;
   }
 }
