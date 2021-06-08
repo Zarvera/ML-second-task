@@ -47,9 +47,20 @@ h1,h2,h3 {color: v.$primary-color100;}
   margin-top: 335px;
 }
 
-.grid-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.form-wrap {
+  display: flex;
+}
+
+.form-wrap-column:not(:first-child) {
+  margin-left: 126px;
+}
+
+.form-wrap-column>fieldset:not(:first-child) {
+  margin-top: 37px;
+}
+
+.form-wrap-column:nth-child(2)>fieldset:nth-child(4) {
+  margin-top: 40px;
 }
 
 .text-input-wrap>fieldset {
@@ -65,6 +76,33 @@ h1,h2,h3 {color: v.$primary-color100;}
   margin-top: 36px;
   &>form, >fieldset:not(:last-child) {
     margin-bottom: 37px;
+  }
+}
+
+.checkbox-wrap>div.checkbox {
+  margin-top: 11px;
+}
+
+.radio-wrap {
+  display: flex;
+  padding-top: 10px;
+  &>:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+
+.toggle-wrap>div.checkbox {
+  margin-top: 11px;
+  &:nth-child(2) {
+    margin-top: 14px;
+  }
+}
+
+.like-wrap {
+  display: flex;
+  padding-top: 12px;
+  &>.like-button:nth-child(2) {
+    margin-left: 10px;
   }
 }
 

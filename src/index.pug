@@ -38,8 +38,8 @@ html(lang='en')
           +font-display('h3', 'H3', 'THIS IS A LABEL CTA TEXT')
           +font-display('p', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
       .form-elements
-        .grid-wrap
-          .grid-wrap-column
+        .form-wrap
+          .form-wrap-column
             .text-input-wrap
               +fieldset({title: 'text field', size: '_size_normal'})
                 +text-input({type: 'text', placeholder: 'Email'})
@@ -59,23 +59,28 @@ html(lang='en')
                 +date-filter
               +fieldset({title: 'subscription text field', size: '_size_small'})
                 +text-input({type: 'email', mod: 'subscription'})
-          .grid-wrap-column
-            +fieldset({title: 'checkbox buttons'})
-              +checkbox({'Можно курить': {id: 'smoke', name: 'smoke'}})
-              +checkbox({'Можно с питомцами': {id: 'pets', name: 'pets', checked: true}})
-              +checkbox({'Можно пригласить гостей (до 10 человек)': {id: 'allow-guests', name: 'allow-guests', checked: true}})
-            +fieldset({title: 'radio buttons'})
-              +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
-              +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
-            +fieldset({title: 'toggle'})
-              +checkbox({'Получать спецпредложения': {id: 'deals', name: 'deals', mod: 'toggle', checked: true}})
-              +checkbox({'Получать спецпредложения': {id: 'deals2', name: 'deals', mod: 'toggle'}})
+          .form-wrap-column
+            +fieldset({title: 'checkbox buttons', size: '_size_smaller'})
+              .checkbox-wrap
+                +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
+                +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
+                +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
+            +fieldset({title: 'radio buttons', size: '_size_smaller'})
+              .radio-wrap
+                +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
+                +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
+            +fieldset({title: 'toggle', size: '_size_small'})
+              .toggle-wrap
+                +checkbox({text: 'Получать спецпредложения', id: 'deals', name: 'deals', mod: 'toggle', checked: true})
+                +checkbox({text: 'Получать спецпредложения', id: 'deals2', name: 'deals', mod: 'toggle'})
             +fieldset({title: 'like button'})
-              +like-button({value: '2'})
-              +like-button({id: 'like-inited', value: '11'})
+              .like-wrap
+                +like-button({value: '2'})
+                +like-button({id: 'like-inited', value: '11'})
             +fieldset({title: 'rate button'})
               +rate-button
-          .grid-wrap-column
+              +rate-button
+          .form-wrap-column
             +fieldset({title: 'range slider'})
               +range-slider
             +fieldset({title: 'buttons'})
