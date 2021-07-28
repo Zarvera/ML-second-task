@@ -1,5 +1,5 @@
-mixin rate-button()
-  .rate-button
+mixin rate-button(attr)
+  .rate-button(id=attr.id)
    input#rate1(type="radio", name="rate", class='rate-button__button')
    label(for="rate1", class='material-icons rate-button__label')
    input#rate2(type="radio", name="rate", class='rate-button__button')
