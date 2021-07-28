@@ -1,5 +1,13 @@
 mixin checkbox(attr)
-  each val, key in attr
-    .checkbox
-      input(type="checkbox", id=val.id, name=val.name, class=(val.mod==='toggle' ? 'checkbox__box_shape_oval' : 'checkbox__box') checked=(val.checked===true ? true : false))
-      label(for=val.id, class=(val.mod==='toggle' ? 'checkbox__label_type_toggler' : 'checkbox__label')) #{key}
+  .checkbox
+    input(
+      type="checkbox"
+      id=attr.id
+      name=attr.name
+      class=(attr.mod==='toggle' ? 'checkbox__box_shape_oval' : 'checkbox__box')
+      checked=attr.checked
+    )
+    label(
+      for=attr.id
+      class=(attr.mod==='toggle' ? 'checkbox__label_type_toggler' : 'checkbox__label')
+    ) #{attr.text}
