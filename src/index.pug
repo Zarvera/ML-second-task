@@ -41,35 +41,35 @@ html(lang='en')
         .form-wrap
           .form-wrap-column
             .text-input-wrap
-              +fieldset({title: 'text field', size: '_size_normal'})
+              +fieldset({title: 'text field'})
                 +text-input({type: 'text', placeholder: 'Email'})
-              +fieldset({title: 'text field', size: '_size_normal'})
+              +fieldset({title: 'text field'})
                 +text-input({type: 'text'})
-              +fieldset({title: 'dropdown', size: '_size_normal'})
+              +fieldset({title: 'dropdown'})
                 +dropdown(['спальни', 'кровати', 'ванные комнаты'], 'Сколько гостей')
-              +fieldset({title: 'masked text field', size: '_size_normal'})
+              +fieldset({title: 'masked text field'})
                 +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', mod: 'mask'})
             .dropdown-wrap
               +form
-                +fieldset({title: 'date dropdown', size: '_size_tiny'})
+                +fieldset({title: 'date dropdown', size: 'tiny'})
                   +datepicker('from')
-                +fieldset({title: 'date dropdown', size: '_size_tiny', margin: true})
+                +fieldset({title: 'date dropdown', size: 'tiny', margin: true})
                   +datepicker('to')
-              +fieldset({title: 'filter date dropdown', size: '_size_small'})
+              +fieldset({title: 'filter date dropdown', size: 'small'})
                 +date-filter
-              +fieldset({title: 'subscription text field', size: '_size_small'})
+              +fieldset({title: 'subscription text field', size: 'small'})
                 +text-input({type: 'email', mod: 'subscription'})
           .form-wrap-column
-            +fieldset({title: 'checkbox buttons', size: '_size_smaller'})
+            +fieldset({title: 'checkbox buttons', size: 'smaller'})
               .checkbox-wrap
                 +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
                 +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
                 +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
-            +fieldset({title: 'radio buttons', size: '_size_smaller'})
+            +fieldset({title: 'radio buttons', size: 'smaller'})
               .radio-wrap
                 +radio-button({label: 'Мужчина', id: 'men', name: 'sex', checked: true})
                 +radio-button({label: 'Женщина', id: 'woman', name: 'sex'})
-            +fieldset({title: 'toggle', size: '_size_small'})
+            +fieldset({title: 'toggle', size: 'small'})
               .toggle-wrap
                 +checkbox({text: 'Получать спецпредложения', id: 'deals', name: 'deals', mod: 'toggle', checked: true})
                 +checkbox({text: 'Получать спецпредложения', id: 'deals2', name: 'deals', mod: 'toggle'})
@@ -78,8 +78,9 @@ html(lang='en')
                 +like-button({value: '2'})
                 +like-button({id: 'like-inited', value: '11'})
             +fieldset({title: 'rate button'})
-              +rate-button
-              +rate-button
+              .rate-wrap
+                +rate-button({id: 'rate-inited4'})
+                +rate-button({id: 'rate-inited5'})
           .form-wrap-column
             +fieldset({title: 'range slider'})
               +range-slider
@@ -89,6 +90,6 @@ html(lang='en')
               +button({type: 'button', value: 'click me'})
               +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
             +fieldset({title: 'pagination'})
-              +pagination
+              +pagination({text: '1-12 из 100+ вариантов аренды'})
         .inited-dropdowns-wrap 
             

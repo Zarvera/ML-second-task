@@ -106,6 +106,13 @@ h1,h2,h3 {color: v.$primary-color100;}
   }
 }
 
+.rate-wrap {
+  display: flex;
+  &>.rate-button:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+
 //Material Icons rules
 .material-icons {
     font-family: 'Material Icons';

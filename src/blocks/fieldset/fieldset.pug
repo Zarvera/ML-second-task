@@ -1,4 +1,15 @@
 mixin fieldset(attr)
-    fieldset(class=attr.margin ? 'fieldset' + ' fieldset' + attr.size + ' fieldset_margin_left' : 'fieldset' + ' fieldset' + attr.size)
-        legend.legend #{attr.title}
-        block
+  -
+    let classname;
+    if(attr.size==='tiny') {
+      classname = 'fieldset_size_tiny';
+    } else if(attr.size==='smaller') {
+      classname = 'fieldset_size_smaller';
+    } else if(attr.size==='small') {
+      classname = 'fieldset_size_small';
+    } else {
+      classname = 'fieldset_size_normal';
+    }
+  fieldset(class=attr.margin ? 'fieldset ' + classname + ' fieldset_margin_left' : 'fieldset ' + classname)
+    legend.legend #{attr.title}
+    block
