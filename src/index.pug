@@ -85,9 +85,15 @@ html(lang='en')
             +fieldset({title: 'range slider'})
               +range-slider
             +fieldset({title: 'buttons'})
-              +button({type: 'button', value: 'click me', style: 'filled'})
-              +button({type: 'button', value: 'click me', style: 'border'})
-              +button({type: 'button', value: 'click me'})
+              .button-wrap
+                +button({type: 'button', value: 'click me', style: 'filled'})
+                +button({type: 'button', value: 'click me', style: 'filled'})
+              .button-wrap
+                +button({type: 'button', value: 'click me', style: 'border'})
+                +button({type: 'button', value: 'click me', style: 'border'})
+              .button-wrap
+                +button({type: 'button', value: 'click me'})
+                +button({type: 'button', value: 'click me'})
               +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
             +fieldset({title: 'pagination'})
               +pagination({text: '1-12 из 100+ вариантов аренды'})

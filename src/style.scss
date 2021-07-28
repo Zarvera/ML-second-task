@@ -113,6 +113,16 @@ h1,h2,h3 {color: v.$primary-color100;}
   }
 }
 
+.button-wrap {
+  display: flex;
+  &>button:nth-child(2) {
+    margin-left: 20px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 //Material Icons rules
 .material-icons {
     font-family: 'Material Icons';
