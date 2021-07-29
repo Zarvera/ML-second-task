@@ -82,7 +82,7 @@ html(lang='en')
                 +rate-button({id: 'rate-inited4'})
                 +rate-button({id: 'rate-inited5'})
           .form-wrap-column
-            +fieldset({title: 'range slider'})
+            +fieldset({title: 'range slider', size: 'small'})
               +range-slider
             +fieldset({title: 'buttons'})
               .button-wrap
@@ -98,4 +98,7 @@ html(lang='en')
             +fieldset({title: 'pagination'})
               +pagination({text: '1-12 из 100+ вариантов аренды'})
         .inited-dropdowns-wrap 
-            
+          +fieldset({title: 'dropdown'})
+            +dropdown(['взрослые', 'дети', 'младенцы'], 'Сколько гостей')
+          +fieldset({title: 'dropdown'})
+            +dropdown(['взрослые', 'дети', 'младенцы'], 'Сколько гостей')

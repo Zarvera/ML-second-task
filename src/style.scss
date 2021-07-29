@@ -51,8 +51,12 @@ h1,h2,h3 {color: v.$primary-color100;}
   display: flex;
 }
 
-.form-wrap-column:not(:first-child) {
+.form-wrap-column:nth-child(2) {
   margin-left: 126px;
+}
+
+.form-wrap-column:nth-child(3) {
+  margin-left: 72px;
 }
 
 .form-wrap-column>fieldset:not(:first-child) {
@@ -108,9 +112,18 @@ h1,h2,h3 {color: v.$primary-color100;}
 
 .rate-wrap {
   display: flex;
+  padding-top: 11px;
   &>.rate-button:nth-child(2) {
     margin-left: 20px;
   }
+}
+
+.fieldset>.range-slider {
+  margin-top: 17px;
+}
+
+.fieldset>.button-wrap:first-of-type {
+  margin-top: 16px;
 }
 
 .button-wrap {
@@ -121,6 +134,10 @@ h1,h2,h3 {color: v.$primary-color100;}
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.inited-dropdowns-wrap {
+  padding-top: 100px;
 }
 
 //Material Icons rules
