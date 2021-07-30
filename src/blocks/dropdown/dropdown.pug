@@ -1,8 +1,8 @@
-mixin dropdown(options, placeholder)
+mixin dropdown(attr)
     .dropdown
-        input(type='text' name='guests' placeholder=placeholder class='dropdown__menu' readonly)
+        input(type='text' name='guests' attr.placeholder=placeholder class='dropdown__menu' id=attr.id readonly)
         span(class='material-icons dropdown__expand-icon') expand_more
-        each val, index in options
+        each val, index in attr.options
             div(class='dropdown__menu-option')
                 h3 #{val}
                 div(class='menu-option__stepper')

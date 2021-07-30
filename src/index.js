@@ -12,5 +12,7 @@ import './blocks/pagination/paginations';
 (function() {
   $('#like-inited').trigger('click'),
   $('#rate-inited4').children('[for="rate4"]').trigger('click'),
-  $('#rate-inited5').children('[for="rate5"]').trigger('click')
+  $('#rate-inited5').children('[for="rate5"]').trigger('click'),
+  $('#dd1').dropdownstepper(),
+  $('#dd2').dropdownstepper()
 })();
