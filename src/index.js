@@ -1,3 +1,4 @@
+import 'jquery-ui-bundle';
 import './style.scss';
 import './blocks/dropdown/dropdown';
 import './blocks/text-input/text-input';
@@ -14,5 +15,8 @@ import './blocks/pagination/paginations';
   $('#rate-inited4').children('[for="rate4"]').trigger('click'),
   $('#rate-inited5').children('[for="rate5"]').trigger('click'),
   $('#dd1').dropdownstepper(),
-  $('#dd2').dropdownstepper()
+  $('#dd2').dropdownstepper( {
+    pronounces: [['спальня', 'спальни', 'спален'], ['кровать', 'кровати', 'кроватей'], ['ванная комната', 'ванные комнаты', 'ванных комнат']],
+    declension: true
+  })
 })();
