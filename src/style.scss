@@ -13,6 +13,7 @@
 @use './blocks/range-slider/range-slider.scss';
 @use './blocks/button/button.scss';
 @use './blocks/pagination/pagination.scss';
+@use './blocks/expandable/expandable.scss';
 
 * {
     margin: 0;
@@ -83,10 +84,6 @@ h1,h2,h3 {color: v.$primary-color100;}
   }
 }
 
-.checkbox-wrap>div.checkbox {
-  margin-top: 11px;
-}
-
 .radio-wrap {
   display: flex;
   padding-top: 10px;
@@ -138,6 +135,11 @@ h1,h2,h3 {color: v.$primary-color100;}
 
 .inited-dropdowns-wrap {
   padding-top: 100px;
+  display: flex;
+}
+
+.temp-wrap {
+  width: 266px;
 }
 
 //Material Icons rules

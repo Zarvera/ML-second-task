@@ -1,0 +1,7 @@
+mixin expandable(attr)
+  .expandable(id=attr.id)
+    .expandable__header
+      h3(class='expandable__heading') #{attr.header}
+      div(class='expandable__icon material-icons') expand_more
+    .expandable__content
+        block

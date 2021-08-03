@@ -1,0 +1,21 @@
+@use '../util/vars' as v;
+
+.expandable__header {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expandable__heading {
+  text-transform: uppercase;
+}
+
+.expandable__icon {
+  color: v.$primary-color50;
+  padding: 0 10px;
+}
+
+.expandable__content {
+  display: none;
+}

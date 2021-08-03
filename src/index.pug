@@ -13,6 +13,7 @@ include blocks/rate-button/rate-button
 include blocks/range-slider/range-slider
 include blocks/button/button
 include blocks/pagination/pagination
+include blocks/expandable/expandable
 
 doctype html
 html(lang='en')
@@ -44,9 +45,9 @@ html(lang='en')
               +fieldset({title: 'text field'})
                 +text-input({type: 'text', placeholder: 'Email'})
               +fieldset({title: 'text field'})
-                +text-input({type: 'text'})
+                +text-input({type: 'text', id: 'init-text_input'})
               +fieldset({title: 'dropdown'})
-                +dropdown({options: ['спальни', 'кровати', 'ванные комнаты'], placeholder: 'Сколько гостей', id: "dd1"})
+                +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd1"})
               +fieldset({title: 'masked text field'})
                 +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', mod: 'mask'})
             .dropdown-wrap
@@ -58,7 +59,7 @@ html(lang='en')
               +fieldset({title: 'filter date dropdown', size: 'small'})
                 +date-filter
               +fieldset({title: 'subscription text field', size: 'small'})
-                +text-input({type: 'email', mod: 'subscription'})
+                +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
           .form-wrap-column
             +fieldset({title: 'checkbox buttons', size: 'smaller'})
               .checkbox-wrap
@@ -98,5 +99,32 @@ html(lang='en')
             +fieldset({title: 'pagination'})
               +pagination({text: '1-12 из 100+ вариантов аренды'})
         .inited-dropdowns-wrap
-          +fieldset({title: 'dropdown'})
-            +dropdown({options: ['спальни', 'кровати', 'ванные комнаты'], placeholder: 'Сколько гостей', id: "dd2"})
+          .form-wrap-column
+            +fieldset({title: 'dropdown', size: 'small'})
+              +dropdown({options: ['спальни', 'кровати', 'ванные комнаты'], placeholder: 'Сколько гостей', id: "dd2"})
+            +fieldset({title: 'dropdown', size: 'small'})
+              +dropdown({options: ['спальни', 'кровати', 'ванные комнаты'], placeholder: 'Сколько гостей', id: "dd3"})
+          .form-wrap-column
+            +fieldset({title: 'dropdown'})
+              +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd4"})
+          .form-wrap-column
+            +fieldset({title: 'dropdown'})
+              +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd5"})
+        .form-wrap
+          .form-wrap-column
+            .temp-wrap
+              +expandable({header: 'expandable checkbox list', id: 'exp1'})
+                +checkbox({id: 'lunch', name: 'lunch', text: 'Завтрак'})
+                +checkbox({id: 'table', name: 'table', text: 'Письменный стол'})
+                +checkbox({id: 'chair', name: 'chair', text: 'Стул для кормления'})
+                +checkbox({id: 'crib', name: 'crib', text: 'Кроватка'})
+                +checkbox({id: 'tv', name: 'tv', text: 'Телевизор'})
+                +checkbox({id: 'shampoo', name: 'shampoo', text: 'Шампунь'})
+            .temp-wrap
+              +expandable({header: 'expandable checkbox list', id: 'exp2'})
+                +checkbox({id: 'lunch1', name: 'lunch1', text: 'Завтрак'})
+                +checkbox({id: 'table1', name: 'table1', text: 'Письменный стол'})
+                +checkbox({id: 'chair1', name: 'chair1', text: 'Стул для кормления'})
+                +checkbox({id: 'crib1', name: 'crib1', text: 'Кроватка'})
+                +checkbox({id: 'tv1', name: 'tv1', text: 'Телевизор'})
+                +checkbox({id: 'shampoo1', name: 'shampoo1', text: 'Шампунь'})

@@ -8,6 +8,7 @@ import './blocks/like-button/like-button';
 import './blocks/rate-button/rate-button';
 import './blocks/range-slider/range-slider';
 import './blocks/pagination/paginations';
+import './blocks/expandable/expandable';
 
 
 (function() {
@@ -18,5 +19,13 @@ import './blocks/pagination/paginations';
   $('#dd2').dropdownstepper( {
     pronounces: [['спальня', 'спальни', 'спален'], ['кровать', 'кровати', 'кроватей'], ['ванная комната', 'ванные комнаты', 'ванных комнат']],
     declension: true
-  })
+  }),
+  $('#dd3').dropdownstepper( {
+    pronounces: [['спальня', 'спальни', 'спален'], ['кровать', 'кровати', 'кроватей'], ['ванная комната', 'ванные комнаты', 'ванных комнат']],
+    declension: true
+  }),
+  $('#dd3').trigger('click'),
+  $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(0).trigger('click').trigger('click'),
+  $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(1).trigger('click').trigger('click'),
+  $('#init-text_input').addClass('text-input_hovered').val('This is pretty awesome')
 })();
