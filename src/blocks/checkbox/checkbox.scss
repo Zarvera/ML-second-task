@@ -6,7 +6,12 @@
   padding: 5px 0;
 }
 
-.checkbox__label {
+.checkbox__label-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox__label, .checkbox__label_rich {
   color: v.$primary-color50;
   display: inline-flex;
   align-items: flex-start;
@@ -27,6 +32,17 @@
     background-position: center center;
     background-size: 50% 50%;
   }
+}
+
+.checkbox__label_rich {
+  font: v.$rich;
+  color: v.$primary-color75;
+}
+
+.label__addition {
+  margin-left: 30px;
+  font: v.$add;
+  color: v.$primary-color50;
 }
 
 .checkbox__label_type_toggler {
@@ -67,14 +83,18 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  &:checked+.checkbox__label::before {
+  &:checked+.checkbox__label::before,
+  &:checked+.checkbox__label-container>.checkbox__label_rich::before {
     background-image: url('./assets/svg/check.svg');
     background-size: 10px 12px;
     border-color: v.$accent-color;
   }
   &:not(:disabled)+.checkbox__label:hover::before,
   &:not(:disabled)+.checkbox__label:active::before,
-  &:not(:disabled)+.checkbox__label:focus::before {
+  &:not(:disabled)+.checkbox__label:focus::before,
+  &:not(:disabled)+.checkbox__label-container>.checkbox__label_rich:hover::before,
+  &:not(:disabled)+.checkbox__label-container>.checkbox__label_rich:active::before,
+  &:not(:disabled)+.checkbox__label-container>.checkbox__label_rich:focus::before {
     border-color: v.$accent-color;
   }
 

@@ -128,3 +128,7 @@ html(lang='en')
                 +checkbox({id: 'crib1', name: 'crib1', text: 'Кроватка'})
                 +checkbox({id: 'tv1', name: 'tv1', text: 'Телевизор'})
                 +checkbox({id: 'shampoo1', name: 'shampoo1', text: 'Шампунь'})
+          .form-wrap-column 
+            +fieldset({title: 'rich checkbox buttons'})
+              +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
+              +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
