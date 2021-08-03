@@ -119,7 +119,7 @@ dropdown([['спальня', 'спальни', 'спален'], ['кровать
     },
     decrement: function(elem) {
       let value = parseInt(elem.target.nextSibling.innerHTML);
-      value--;
+      if(value > 0) value--;
       elem.target.nextSibling.innerHTML = value;
       this.updateValue();
     },
@@ -153,6 +153,8 @@ dropdown([['спальня', 'спальни', 'спален'], ['кровать
           this.element.val(result + ' ' + options.pronounces[1]);
         } else if(result === 1) {
           this.element.val(result + ' ' + options.pronounces[0]);
+        } else {
+          this.element.val('')
         }
       }
     },

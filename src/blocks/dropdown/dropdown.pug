@@ -1,6 +1,6 @@
 mixin dropdown(attr)
     .dropdown
-        input(type='text' name='guests' attr.placeholder=placeholder class='dropdown__menu' id=attr.id readonly)
+        input(type='text' name='guests' placeholder=attr.placeholder class='dropdown__menu' id=attr.id readonly)
         span(class='material-icons dropdown__expand-icon') expand_more
         each val, index in attr.options
             div(class='dropdown__menu-option')
