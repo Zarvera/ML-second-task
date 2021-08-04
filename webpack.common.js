@@ -1,7 +1,7 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const pug = require("pug");
-const loader = require("sass-loader");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const pug = require('pug');
+const loader = require('sass-loader');
 const webpack = require('webpack');
 
 module.exports = {
@@ -26,22 +26,29 @@ module.exports = {
         rules: [
             {
                 test: /\.pug$/,
-                loader: "pug-loader",
+                loader: 'pug-loader',
             },
             {
                 test: /\.(woff|eot|ttf|otf)$/i,
-                type: "asset/resource",
+                type: 'asset/resource',
                 generator: {
                     filename: 'assets/fonts/[name]/[name][ext]'
                 },
             },
             {
               test: /\.svg$/i,
-              type: "asset/resource",
+              type: 'asset/resource',
               generator: {
                   filename: 'assets/svg/[name][ext]'
               },
-          },
+            },
+            {
+              test: /\.png$/i,
+              type: 'asset/resource',
+              generator: {
+                filename: 'assets/img/[name][ext]'
+              },
+            },
         ]
     },
 };

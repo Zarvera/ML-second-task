@@ -16,6 +16,7 @@ include blocks/pagination/pagination
 include blocks/expandable/expandable
 include blocks/bullet-list/bullet-list
 include blocks/feature/feature
+include blocks/comment/comment
 
 doctype html
 html(lang='en')
@@ -141,3 +142,6 @@ html(lang='en')
           .form-wrap-column
             +feature({icon: 'insert_emoticon', text: 'Шумопоглощающие стены', bold: 'Комфорт'})
             +feature({icon: 'location_city', text: 'Окно в каждой из спален', bold: 'Удобство'})
+          .form-wrap-column
+            +comment({name: 'Мурад Сарафанов', date: '5 дней назад', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+              +like-button({value: '11'})

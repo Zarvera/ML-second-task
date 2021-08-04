@@ -1,0 +1,21 @@
+.comment__wrap-top {
+  display: flex;
+}
+
+.comment__picture {
+  margin-right: 10px;
+}
+
+.comment__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.comment__wrap-bottom {
+  display: flex;
+}
+
+.comment__like {
+  margin-right: 18px;
+}
