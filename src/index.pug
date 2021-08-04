@@ -14,6 +14,8 @@ include blocks/range-slider/range-slider
 include blocks/button/button
 include blocks/pagination/pagination
 include blocks/expandable/expandable
+include blocks/bullet-list/bullet-list
+include blocks/feature/feature
 
 doctype html
 html(lang='en')
@@ -132,3 +134,10 @@ html(lang='en')
             +fieldset({title: 'rich checkbox buttons'})
               +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
               +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+          .form-wrap-column 
+            +fieldset({title: 'bullet list'})
+              +bullet-list({list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+        .form-wrap
+          .form-wrap-column
+            +feature({icon: 'insert_emoticon', text: 'Шумопоглощающие стены', bold: 'Комфорт'})
+            +feature({icon: 'location_city', text: 'Окно в каждой из спален', bold: 'Удобство'})

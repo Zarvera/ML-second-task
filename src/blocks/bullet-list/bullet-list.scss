@@ -1,0 +1,6 @@
+@use '../util/vars' as v;
+
+.bullet-list__item::marker {
+  color: v.$primary-color25;
+  font-size: 32px;
+}

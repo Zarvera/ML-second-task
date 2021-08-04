@@ -1,0 +1,29 @@
+@use '../util/vars' as v;
+
+.feature-wrap {
+  display: flex;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-bottom: 20px;
+  &:not(:first-child) {
+    padding-top: 20px;
+  }
+}
+
+.feature__text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.feature__icon.material-icons {
+  font-size: 48px;
+  background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+
+.feature__text_bold {
+  font: v.$rich;
+}
