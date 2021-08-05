@@ -1,10 +1,23 @@
-mixin color-display(color, colorName, colorCode)
-    .color-display
-        div(class='color-display__color-block color-block' + color)
-        .color-display__text-block
-            h2.color-display__color-name #{colorName}
-            p.color-display__color-code #{colorCode}
-//-
-    'color' is a class _modifier for 'color-block' element.
-    'colorName' is a text to be rendered as a the name of the displayed color.
-    'colorCode' is a text to be rendered as the colors hexadecimal. 
+mixin color-display(attr)
+  -
+    let colorClass, colorName, colorCode;
+    if(attr.color === 'Dark Shade 100%') {
+      [colorClass, colorName, colorCode] = ['_primary-color100', 'Dark Shade 100%', '#1F2041'];
+    } else if(attr.color === 'Dark Shade 75%') {
+      [colorClass, colorName, colorCode] = ['_primary-color75', 'Dark Shade 75%', '#1F2041'];
+    } else if(attr.color === 'Dark Shade 50%') {
+      [colorClass, colorName, colorCode] = ['_primary-color50', 'Dark Shade 50%', '#1F2041'];
+    } else if(attr.color === 'Dark Shade 25%') {
+      [colorClass, colorName, colorCode] = ['_primary-color25', 'Dark Shade 25%', '#1F2041'];
+    } else if(attr.color === 'Dark Shade 5%') {
+      [colorClass, colorName, colorCode] = ['_primary-color5', 'Dark Shade 5%', '#1F2041'];
+    } else if(attr.color === 'Accent') {
+      [colorClass, colorName, colorCode] = ['_accent-color', 'Purple', '#BC9CFF'];
+    } else if(attr.color === 'Selection') {
+      [colorClass, colorName, colorCode] = ['_selection-color', 'Green', '#6FCF97'];
+    }
+  .color-display
+    div(class='color-display__color-block color-block' + colorClass)
+    .color-display__text-block
+      h2.color-display__color-name #{colorName}
+      p.color-display__color-code #{colorCode}

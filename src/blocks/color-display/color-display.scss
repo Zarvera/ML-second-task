@@ -2,7 +2,6 @@
 
 .color-display {
     display: flex;
-    &:not(:last-child) {margin-bottom: 20px;}
     &__color-block {
         width: 70px;
         height: 70px;

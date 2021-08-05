@@ -1,0 +1,19 @@
+include ../blocks/color-display/color-display
+include ../blocks/font-display/font-display
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Colors & Type
+  body
+    .color-display-wrap
+      +color-display({color: 'Dark Shade 100%'})
+      +color-display({color: 'Dark Shade 75%'})
+      +color-display({color: 'Dark Shade 50%'})
+      +color-display({color: 'Dark Shade 25%'})
+      +color-display({color: 'Dark Shade 5%'})
+      +color-display({color: 'Accent'})
+      +color-display({color: 'Selection'})
