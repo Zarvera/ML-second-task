@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   padding: 5px 0;
+  &:first-child {
+    padding-top: 12px;
+  }
 }
 
 .checkbox__label-container {
