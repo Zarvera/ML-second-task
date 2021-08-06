@@ -1,7 +1,14 @@
 @use '../util/vars' as v;
 
+.radio-container {
+  display: flex;
+}
+
 .radio-button {
   display: flex;
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
 }
 
 .radio-button__label {

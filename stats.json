@@ -1,0 +1,51 @@
+
+> ml-second-task@1.0.0 build C:\Users\hexag\ML-second-task
+> webpack --config webpack.prod.js
+
+assets by path [1m[32massets/[39m[22m 1.89 MiB
+  assets by path [1m[32massets/fonts/Montserrat-Regular/[39m[22m 650 KiB 3 assets
+  assets by path [1m[32massets/fonts/Montserrat-Bold/[39m[22m 645 KiB 3 assets
+  assets by path [1m[32massets/fonts/MaterialIcons-Regular/[39m[22m 635 KiB
+    asset [1m[32massets/fonts/MaterialIcons-Regular/MaterialIcons-Regular.eot[39m[22m 225 KiB [1m[33m[compared for emit][39m[22m [from: src/assets/fonts/MaterialIcons/MaterialIcons-Regular.eot] (auxiliary name: main)
+    asset [1m[32massets/fonts/MaterialIcons-Regular/MaterialIcons-Regular.ttf[39m[22m 225 KiB [1m[33m[compared for emit][39m[22m [from: src/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf] (auxiliary name: main)
+    asset [1m[32massets/fonts/MaterialIcons-Regular/MaterialIcons-Regular.woff[39m[22m 185 KiB [1m[33m[compared for emit][39m[22m [from: src/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff] (auxiliary name: main)
+  asset [1m[32massets/svg/check.svg[39m[22m 785 bytes [1m[33m[compared for emit][39m[22m [from: src/assets/svg/check.svg] (auxiliary name: main)
+assets by chunk 547 KiB (name: main)
+  asset [1m[33mmain.js[39m[22m [1m[33m496 KiB[39m[22m [1m[33m[compared for emit][39m[22m [1m[32m[minimized][39m[22m [1m[33m[big][39m[22m (name: main) 1 related asset
+  asset [1m[32mmain.css[39m[22m 50.2 KiB [1m[32m[emitted][39m[22m (name: main)
+assets by path [1m[32m./*.html[39m[22m 21.6 KiB
+  asset [1m[32m./form-elements.html[39m[22m 18.7 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32m./colors-and-type.html[39m[22m 2.88 KiB [1m[33m[compared for emit][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 547 KiB (1.89 MiB) = [1m[32mmain.css[39m[22m 50.2 KiB [1m[32mmain.js[39m[22m 496 KiB 10 auxiliary assets
+orphan modules 2.02 KiB [1m[33m[orphan][39m[22m 8 modules
+runtime modules 663 bytes 3 modules
+code generated modules 1.05 MiB (javascript) 50.2 KiB (css/mini-extract) [1m[33m[code generated][39m[22m
+  cacheable modules 1.05 MiB
+    modules by path [1m./src/[39m[22m 114 KiB
+      modules by path [1m./src/blocks/[39m[22m 7.91 KiB 4 modules
+      modules by path [1m./src/vendors/js/*.js[39m[22m 103 KiB 2 modules
+      [1m./src/index.js + 5 modules[39m[22m 3.42 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    modules by path [1m./node_modules/[39m[22m 965 KiB 4 modules
+  css modules 50.2 KiB
+    css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js![1m./src/main.scss[39m[22m 43.8 KiB [1m[33m[code generated][39m[22m
+    css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js![1m./node_modules/nouislider/dist/nouislider.css[39m[22m 3.78 KiB [1m[33m[code generated][39m[22m
+    css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js![1m./src/vendors/js/simplePagination.css[39m[22m 2.6 KiB [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1masset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.js (496 KiB)[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mentrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (547 KiB)
+      main.css
+      main.js
+[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mwebpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/[39m[22m
+
+[1m[33m5 WARNINGS in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)[39m[22m
+webpack 5.33.2 compiled with [1m[33m8 warnings[39m[22m in 7570 ms

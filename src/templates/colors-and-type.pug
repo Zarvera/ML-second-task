@@ -9,11 +9,17 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Colors & Type
   body
-    .color-display-wrap
-      +color-display({color: 'Dark Shade 100%'})
-      +color-display({color: 'Dark Shade 75%'})
-      +color-display({color: 'Dark Shade 50%'})
-      +color-display({color: 'Dark Shade 25%'})
-      +color-display({color: 'Dark Shade 5%'})
-      +color-display({color: 'Accent'})
-      +color-display({color: 'Selection'})
+    .colors-and-type-wrap
+      .color-display-wrap
+        +color-display({color: 'Dark Shade 100%'})
+        +color-display({color: 'Dark Shade 75%'})
+        +color-display({color: 'Dark Shade 50%'})
+        +color-display({color: 'Dark Shade 25%'})
+        +color-display({color: 'Dark Shade 5%'})
+        +color-display({color: 'Accent'})
+        +color-display({color: 'Selection'})
+      .type-display-wrap
+        +font-display({tag: 'h1', tagStr: 'H1', description: 'This one is the sub-section or widget title'})
+        +font-display({tag: 'h2', tagStr: 'H2', description: 'Next one is the item title inside widgets'})
+        +font-display({tag: 'h3', tagStr: 'H3', description: 'THIS IS A LABEL CTA TEXT'})
+        +font-display({tag: 'p', tagStr: 'Body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})

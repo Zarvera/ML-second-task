@@ -1,0 +1,52 @@
+.wrapper {
+  margin: 10vh 10vw;
+}
+
+.wrapper-row {
+  display: flex;
+}
+
+.wrapper-column {
+  display: flex;
+  flex-direction: column;
+  &:nth-child(2) {
+    margin-left: 126px;
+  }
+  &:nth-child(3) {
+    margin-left: 132px;
+  }
+}
+
+.text-fields-wrap>fieldset:not(:first-child) {
+  margin-top: 20px;
+}
+
+.dropdown-wrap>fieldset {
+  margin-top: 40px;
+}
+
+.datepicker-wrap {
+  display: flex;
+  margin-top: 40px;
+  &>fieldset:first-child {
+    margin-right: 20px;
+  }
+}
+
+.checkbox-wrap>fieldset:not(:first-child) {
+  margin-top: 40px;
+}
+
+.separating-wrap {
+  display: flex;
+  &>*:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+
+.separating-wrap_small {
+  display: flex;
+  &>*:nth-child(2) {
+  margin-left: 10px;
+  }
+}

@@ -1,7 +1,7 @@
 mixin fieldset(attr)
   -
-    let classname;
-    if(attr.size==='tiny') {
+    let classname, padding;
+    if(attr.size === 'tiny') {
       classname = 'fieldset_size_tiny';
     } else if(attr.size==='smaller') {
       classname = 'fieldset_size_smaller';
@@ -10,6 +10,11 @@ mixin fieldset(attr)
     } else {
       classname = 'fieldset_size_normal';
     }
-  fieldset(class=attr.margin ? 'fieldset ' + classname + ' fieldset_margin_left' : 'fieldset ' + classname)
-    legend.legend #{attr.title}
+    if(attr.padding === 'large') {
+      padding = ' legend_padding_large';
+    } else {
+      padding = '';
+    }
+  fieldset(class='fieldset ' + classname)
+    legend(class='fieldset__legend' + padding) #{attr.title}
     block

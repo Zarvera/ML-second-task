@@ -1,4 +1,8 @@
 mixin radio-button(attr)
-  .radio-button
-    input(type="radio", id=attr.id , name=attr.name, class='radio-button__button', checked=(attr.checked===true ? true : false))
-    label(for=attr.id, class='radio-button__label') #{attr.label}
+  .radio-container
+    .radio-button
+      input(type="radio", id=attr.id1 , name=attr.name, class='radio-button__button', checked)
+      label(for=attr.id1, class='radio-button__label') #{attr.label1}
+    .radio-button
+      input(type="radio", id=attr.id2 , name=attr.name, class='radio-button__button')
+      label(for=attr.id2, class='radio-button__label') #{attr.label2}
