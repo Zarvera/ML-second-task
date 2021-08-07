@@ -4,11 +4,15 @@
 
 .wrapper-row {
   display: flex;
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
 }
 
 .wrapper-column {
   display: flex;
   flex-direction: column;
+  min-width: 320px;
   &:nth-child(2) {
     margin-left: 126px;
   }
@@ -17,11 +21,13 @@
   }
 }
 
-.text-fields-wrap>fieldset:not(:first-child) {
+.text-fields-wrap>fieldset:not(:first-child),
+.wrapper-row:nth-child(2)>.wrapper-column:first-child>.fieldset:nth-child(2) {
   margin-top: 20px;
 }
 
-.dropdown-wrap>fieldset {
+.dropdown-wrap>fieldset,
+.checkbox-wrap>fieldset:not(:first-child) {
   margin-top: 40px;
 }
 
@@ -31,10 +37,6 @@
   &>fieldset:first-child {
     margin-right: 20px;
   }
-}
-
-.checkbox-wrap>fieldset:not(:first-child) {
-  margin-top: 40px;
 }
 
 .separating-wrap {
@@ -49,4 +51,15 @@
   &>*:nth-child(2) {
   margin-left: 10px;
   }
+}
+
+.button-wrap {
+  margin-bottom: 30px;
+  &>button:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+
+.range-slider-wrap {
+  margin-bottom: 40px;
 }

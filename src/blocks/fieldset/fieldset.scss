@@ -26,3 +26,8 @@
 .legend_padding_large {
   padding-bottom: 16px;
 }
+
+.legend__wrap {
+  display: flex;
+  justify-content: space-between;
+}

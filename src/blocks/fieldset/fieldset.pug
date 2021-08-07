@@ -15,6 +15,13 @@ mixin fieldset(attr)
     } else {
       padding = '';
     }
-  fieldset(class='fieldset ' + classname)
-    legend(class='fieldset__legend' + padding) #{attr.title}
-    block
+  if attr.mod === 'double'
+    fieldset(class='fieldset ' + classname)
+      .legend__wrap
+        legend(class='fieldset__legend' + padding) #{attr.title}
+        div(class='fieldset__addition' + padding)
+      block
+  else
+    fieldset(class='fieldset ' + classname)
+      legend(class='fieldset__legend' + padding) #{attr.title}
+      block

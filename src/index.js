@@ -27,5 +27,7 @@ import './blocks/expandable/expandable';
   $('#dd3').trigger('click'),
   $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(0).trigger('click').trigger('click'),
   $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(1).trigger('click').trigger('click'),
-  $('#init-text_input').addClass('text-input_hovered').val('This is pretty awesome')
+  $('#init-text_input').addClass('text-input_hovered').val('This is pretty awesome'),
+  $('#exp2').children('.expandable__header').trigger('click'),
+  $('#table1, #chair1, #crib1').trigger('click')
 })();

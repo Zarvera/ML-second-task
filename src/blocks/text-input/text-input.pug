@@ -1,7 +1,7 @@
 mixin text-input(attr)
   if attr.mod === 'subscription'
     .text-input__flex-wrap
-      input(type=attr.type, placeholder=attr.placeholder, id=attr.id)(class='text-input_with-button text-input_subscription')
+      input(type=attr.type, placeholder=attr.placeholder, id=attr.id, class='text-input_with-button text-input_subscription')
       input(type="submit", value="arrow_forward", class='material-icons text-input__submit-button')
   else
     input(type=attr.type, placeholder=attr.placeholder, id=attr.id, class='text-input')

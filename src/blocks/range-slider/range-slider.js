@@ -2,7 +2,7 @@ import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
 var nonLinearStepSlider = document.getElementById('range-slider');
-var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
+var nonLinearStepSliderValueElement = nonLinearStepSlider.previousSibling.childNodes[1];
 
 noUiSlider.create(nonLinearStepSlider, {
     start: [5000, 10000],

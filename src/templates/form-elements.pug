@@ -65,8 +65,9 @@ html(lang="en")
                 +rate-button({id: 'rate-inited4'})
                 +rate-button({id: 'rate-inited5'})
         .wrapper-column
-          +fieldset({title: 'range slider', size: 'small', padding: 'large'})
-            +range-slider
+          .range-slider-wrap
+            +fieldset({title: 'range slider', size: 'small', padding: 'large', mod: 'double'})
+              +range-slider
           +fieldset({title: 'buttons', padding: 'large'})
             .button-wrap
               +button({type: 'button', value: 'click me', style: 'filled'})
@@ -77,6 +78,7 @@ html(lang="en")
             .button-wrap
               +button({type: 'button', value: 'click me'})
               +button({type: 'button', value: 'click me'})
+            .button-wrap
               +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
           +fieldset({title: 'pagination', padding: 'large'})
             +pagination({text: '1-12 из 100+ вариантов аренды'})
@@ -109,11 +111,11 @@ html(lang="en")
             +checkbox({id: 'tv1', name: 'tv1', text: 'Телевизор'})
             +checkbox({id: 'shampoo1', name: 'shampoo1', text: 'Шампунь'})
         .wrapper-column
-          +fieldset({title: 'rich checkbox buttons'})
+          +fieldset({title: 'rich checkbox buttons', padding: 'large'})
             +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
             +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
         .wrapper-column
-          +fieldset({title: 'bullet list'})
+          +fieldset({title: 'bullet list', padding: 'large'})
             +bullet-list({list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
       .wrapper-row
         .wrapper-column
