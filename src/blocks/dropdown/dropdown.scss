@@ -4,23 +4,30 @@
   height: 100%;
   position: relative;
   width: 100%;
+}
+
+.dropdown>.dropdown__value {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   &:hover,&:active,&:focus {
     border-color: v.$primary-color50;
     color: v.$primary-color75;
   }
 }
 
-.dropdown>.dropdown__value {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
 .dropdown_open>.dropdown__value {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-color: v.$primary-color50;
+  color: v.$primary-color75;
+}
+
+.dropdown_open>.dropdown__expand-icon {
+  color: v.$primary-color75;
 }
 
 .dropdown__value {
+  cursor: pointer;
   width: 100%;
   outline: none;
   box-sizing: border-box;
@@ -31,9 +38,10 @@
 }
 
 .dropdown__expand-icon {
+  cursor: pointer;
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 11px;
+  right: 11px;
   color: v.$primary-color50;
 }
 
@@ -47,9 +55,9 @@
   z-index: 1;
   background-color: white;
   width: 100%;
-  border-left: 1px solid v.$primary-color25;
-  border-bottom: 1px solid v.$primary-color25;
-  border-right: 1px solid v.$primary-color25;;
+  border-left: 1px solid v.$primary-color50;
+  border-bottom: 1px solid v.$primary-color50;
+  border-right: 1px solid v.$primary-color50;;
   box-sizing: border-box;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -64,6 +72,9 @@
   &:nth-of-type(1) {
     padding-top: 6px;
   }
+  &:nth-of-type(4) {
+    padding: 13px 7px 13px 14px;
+  }
 }
 
 .dropdown-item__stepper {
@@ -72,6 +83,7 @@
 }
 
 .stepper__button {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 22px;
@@ -81,6 +93,23 @@
 }
 
 .stepper__result {
-  margin-left: 12px;
-  margin-right: 12px;
+  min-width: 31px;
+  text-align: center;
+}
+
+.dropdown__button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font: v.$h3;
+  color: v.$accent-color;
+  appearance: none;
+  border: none;
+  background: transparent;
+  transition: color 0.4s;
+  &:hover,&:focus,&:active {
+    color: v.$primary-color50;
+  }
+  &_disabled {
+    visibility: hidden;
+  }
 }

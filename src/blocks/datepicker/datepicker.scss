@@ -1,19 +1,35 @@
 @use '../../../node_modules/air-datepicker/dist/css/datepicker.css';
 @use '../util/vars' as v;
 
+.date-picker {
+  position: relative;
+  width: inherit;
+  display: flex;
+}
+
+.date-picker__expand-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 11px;
+  right: 11px;
+  color: v.$primary-color50;
+  height: 12px;
+}
+
 .my-datepicker {
-    width: inherit;
-    box-sizing: border-box;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 15px;
-    border: 1px solid v.$primary-color25;
-    border-radius: 4px;
-    outline: none;
-    font: v.$body;
-    color: v.$primary-color25;
-    &:hover,&:focus,&:active {
-        border: 1px solid v.$primary-color50;
-        color: v.$primary-color75;
-    }
+  cursor: pointer;
+  width: inherit;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  border: 1px solid v.$primary-color25;
+  border-radius: 4px;
+  outline: none;
+  font: v.$body;
+  color: v.$primary-color25;
+  &:hover,&:focus,&:active {
+    border: 1px solid v.$primary-color50;
+    color: v.$primary-color75;
+  }
 }

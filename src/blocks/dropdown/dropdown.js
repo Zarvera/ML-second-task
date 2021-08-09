@@ -2,11 +2,29 @@
   $.widget('zrv.dropdownstepper', {
     options: {
       pronounces: ['гость', 'гостя', 'гостей'],
-      declension: false
+      declension: false,
+      buttons: false
     },
     _create: function() {
       this.btn_Inc = this.element.find('.button_increment');
       this.btn_Dec = this.element.find('.button_decrement');
+      if(this.options.buttons) {
+        let $buttons = $(
+          `<div class="dropdown__item">
+            <button type="button" class="dropdown__button button_clear">ОЧИСТИТЬ</button>
+            <button type="button" class="dropdown__button button_accept">ПРИМЕНИТЬ</button>
+          </div>`);
+        this.element.children('.dropdown__list').append($buttons);
+        this.btn_Clear = this.element.find('.button_clear');
+        this.btn_Clear.toggleClass('dropdown__button_disabled');
+        this.btn_Accept = this.element.find('.button_accept');
+        this._on(this.btn_Clear, {
+          click: 'clear'
+        });
+        this._on(this.btn_Accept, {
+          click: 'accept'
+        });
+      }
       this._on(this.element, {
         click: 'open'
       });
@@ -69,6 +87,25 @@
           this.element.children('.dropdown__value').val('')
         }
       }
+      if(options.buttons) {
+        if(this.element.children('.dropdown__value').val().length > 0
+          && this.btn_Clear.hasClass('dropdown__button_disabled')) {
+            this.btn_Clear.toggleClass('dropdown__button_disabled');
+        } else if(this.element.children('.dropdown__value').val().length === 0
+          && this.btn_Clear.hasClass('dropdown__button_disabled') === false) {
+            this.btn_Clear.toggleClass('dropdown__button_disabled');
+        }
+      }
+    },
+    clear: function() {
+      this.element.children('.dropdown__value').val('');
+      this.element.find('.stepper__result').text('0');
+      this.btn_Clear.toggleClass('dropdown__button_disabled');
+    },
+    accept: function() {
+      this.element.find('.dropdown__list').toggleClass('dropdown__list_open');
+      this.element.toggleClass('dropdown_open');
+      console.log(this.element);
     },
     _setOption: function( key, value ) {
       if ( key === "pronounces" ) {
@@ -76,6 +113,9 @@
       }
       if ( key === "declension" ) {
         this.element.declension( value );
+      }
+      if ( key === "buttons" ) {
+        this.element.buttons( value );
       }
       this._super( key, value );
     }

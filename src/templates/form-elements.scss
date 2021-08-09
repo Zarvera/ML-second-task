@@ -4,8 +4,11 @@
 
 .wrapper-row {
   display: flex;
-  &:not(:last-child) {
+  &:first-child {
     margin-bottom: 100px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 158px;
   }
 }
 
@@ -62,4 +65,8 @@
 
 .range-slider-wrap {
   margin-bottom: 40px;
+}
+
+.wrapper-column>.expandable:first-child {
+  margin-bottom: 20px;
 }

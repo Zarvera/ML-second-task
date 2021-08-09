@@ -1,30 +1,30 @@
 @use '../util/vars' as v;
 
 .color-display {
+  display: flex;
+  &__color-block {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+  &__text-block {
+    margin-left: 40px;
+    padding: 5px 0 4px 0;
     display: flex;
-    &__color-block {
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-    }
-    &__text-block {
-        margin-left: 40px;
-        padding: 5px 0 4px 0;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-    &__color-code {
-        font: v.$code;
-    }
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  &__color-code {
+    font: v.$code;
+  }
 }
 
 .color-block {
-    &_primary-color100 {background-color: v.$primary-color100;}
-    &_primary-color75 {background-color: v.$primary-color75;}
-    &_primary-color50 {background-color: v.$primary-color50;}
-    &_primary-color25 {background-color: v.$primary-color25;}
-    &_primary-color5 {background-color: v.$primary-color5;}
-    &_accent-color {background-color: v.$accent-color;}
-    &_selection-color {background-color: v.$selection-color;}
+  &_primary-color100 {background-color: v.$primary-color100;}
+  &_primary-color75 {background-color: v.$primary-color75;}
+  &_primary-color50 {background-color: v.$primary-color50;}
+  &_primary-color25 {background-color: v.$primary-color25;}
+  &_primary-color5 {background-color: v.$primary-color5;}
+  &_accent-color {background-color: v.$accent-color;}
+  &_selection-color {background-color: v.$selection-color;}
 }

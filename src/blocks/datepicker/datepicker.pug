@@ -1,2 +1,9 @@
 mixin datepicker(point)
-    input(type='text' data-range="true" data-multiple-dates-separator=" - " placeholder='ДД.ММ.ГГГГ' class='my-datepicker datepicker__field_' + point)
+  .date-picker
+    input(type='text',
+      data-range="true",
+      data-multiple-dates-separator=" - ",
+      placeholder='ДД.ММ.ГГГГ',
+      class='my-datepicker datepicker__field_' + point,
+      readonly)
+    span(class='material-icons date-picker__expand-icon') expand_more

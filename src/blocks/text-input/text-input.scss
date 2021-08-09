@@ -5,25 +5,25 @@
 }
 
 .text-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px 15px;
-    border: 1px solid v.$primary-color25;
-    border-radius: 4px;
-    outline: none;
-    font: v.$body;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border: 1px solid v.$primary-color25;
+  border-radius: 4px;
+  outline: none;
+  font: v.$body;
+  color: v.$primary-color25;
+  &::placeholder {
     color: v.$primary-color25;
-    &::placeholder {
-        color: v.$primary-color25;
-    }
-    &:hover,&:focus,&:active,&_hovered {
-        border: 1px solid v.$primary-color50;
-        color: v.$primary-color75;
-    }
-    &_with-button {
-      @extend .text-input;
-      padding-right: 44px;
-    }
+  }
+  &:hover,&:focus,&:active,&_hovered {
+    border: 1px solid v.$primary-color50;
+    color: v.$primary-color75;
+  }
+  &_with-button {
+    @extend .text-input;
+    padding-right: 44px;
+  }
 }
 
 .text-input__submit-button {

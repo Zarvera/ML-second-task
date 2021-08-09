@@ -1,0 +1,16 @@
+@use '../util/vars' as v;
+
+.date-filter-wrap {
+  width: inherit;
+  display: flex;
+  position: relative;
+}
+
+.date-filter__expand-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 11px;
+  right: 11px;
+  color: v.$primary-color50;
+  height: 12px;
+}
