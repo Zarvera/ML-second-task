@@ -1,11 +1,12 @@
 mixin dropdown(attr)
-    .dropdown
-        input(type='text' name='guests' placeholder=attr.placeholder class='dropdown__menu' id=attr.id readonly)
-        span(class='material-icons dropdown__expand-icon') expand_more
-        each val, index in attr.options
-            div(class='dropdown__menu-option')
-                h3 #{val}
-                div(class='menu-option__stepper')
-                    button(type='button' class='menu-option__stepper-button button_decrement') -
-                    h3(class='menu-option__stepper-result' data-index=index) 0
-                    button(type='button' class='menu-option__stepper-button button_increment') +
+  .dropdown(id=attr.id)
+    input(type='text' name='guests' placeholder=attr.placeholder class='dropdown__value' readonly)
+    span(class='material-icons dropdown__expand-icon') expand_more
+    .dropdown__list
+      each val, index in attr.options
+        div(class='dropdown__item')
+          h3 #{val}
+          div(class='dropdown-item__stepper')
+            button(type='button' class='stepper__button button_decrement') -
+            h3(class='stepper__result' data-index=index) 0
+            button(type='button' class='stepper__button button_increment') +

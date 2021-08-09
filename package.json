@@ -4,11 +4,13 @@
   "description": "Second task for ML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --open --config webpack.dev.js"
+    "dev": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zarvera/ML-second-task.git"
@@ -21,7 +23,10 @@
   "homepage": "https://github.com/Zarvera/ML-second-task#readme",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.2",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.0.7",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.5.0",
     "postcss-loader": "^5.2.0",

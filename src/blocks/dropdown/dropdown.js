@@ -5,8 +5,8 @@
       declension: false
     },
     _create: function() {
-      this.btn_Inc = this.element.siblings('.dropdown__menu-option').find('.button_increment');
-      this.btn_Dec = this.element.siblings('.dropdown__menu-option').find('.button_decrement');
+      this.btn_Inc = this.element.find('.button_increment');
+      this.btn_Dec = this.element.find('.button_decrement');
       this._on(this.element, {
         click: 'open'
       });
@@ -17,8 +17,11 @@
         click: 'decrement'
       });
     },
-    open: function() {
-      this.element.siblings('.dropdown__menu-option').toggleClass('dropdown__menu-option_open');
+    open: function(elem) {
+      if(elem.target.classList.contains('dropdown__value') || elem.target.classList.contains('dropdown__expand-icon')) {
+        this.element.find('.dropdown__list').toggleClass('dropdown__list_open');
+        this.element.toggleClass('dropdown_open');
+      }   
     },
     increment: function(elem) {
       let value = parseInt(elem.target.previousSibling.innerHTML);
@@ -35,7 +38,7 @@
     updateValue: function() {
       let output = [];
       let options = this.options;
-      let allValues = this.element.parent().find('.menu-option__stepper-result');
+      let allValues = this.element.parent().find('.stepper__result');
       let checkValue = function() {
         let stepValue = parseInt($(this).text());
         let stepIndex = $(this).attr('data-index');
@@ -49,21 +52,21 @@
         };
       if(options.declension) {
         allValues.map(checkValue);
-        this.element.val(output.join(', '));
+        this.element.children('.dropdown__value').val(output.join(', '));
       }
       if(!options.declension) {
         let numArr = [];
         let retrieve = function() { numArr.push(parseInt($(this).text()));}
-        allValues.map(retrieve);;
+        allValues.map(retrieve);
         let result = numArr.reduce((acc, cV) => acc + cV);
         if(result > 4) {
-          this.element.val(result + ' ' + options.pronounces[2]);
+          this.element.children('.dropdown__value').val(result + ' ' + options.pronounces[2]);
         } else if(result > 1 && result < 5) {
-          this.element.val(result + ' ' + options.pronounces[1]);
+          this.element.children('.dropdown__value').val(result + ' ' + options.pronounces[1]);
         } else if(result === 1) {
-          this.element.val(result + ' ' + options.pronounces[0]);
+          this.element.children('.dropdown__value').val(result + ' ' + options.pronounces[0]);
         } else {
-          this.element.val('')
+          this.element.children('.dropdown__value').val('')
         }
       }
     },

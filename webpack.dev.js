@@ -1,53 +1,26 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
-const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { merge } = require('webpack-merge');
+const commonConfig = require('./webpack.common.js');
 
-module.exports = merge(common, {
-  entry: {
-    app: './src/index.js',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    clean: true,
-  },
+
+const devConfig = merge(commonConfig, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
-    contentBase: './dist',
-    historyApiFallback: true,
+    contentBase: commonConfig.externals.paths.dist,
     open: true,
     compress: true,
     hot: true,
     port: 8080,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'src/index.pug'
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[file].map'
     })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(sc|c)ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  require('autoprefixer')
-                ],
-              },
-            },
-          },
-          'sass-loader'
-        ],
-      },
-    ],
-  },
+  ]
 });
+
+module.exports = new Promise((resolve, reject) => {
+  resolve(devConfig)
+})

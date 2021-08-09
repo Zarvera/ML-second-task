@@ -1,4 +1,4 @@
-import './main.scss';
+import './assets/scss/main.scss';
 import 'jquery-ui-bundle';
 import './vendors/js/jquery.inputmask.min.js';
 import './blocks/dropdown/dropdown';
@@ -24,7 +24,7 @@ import './blocks/expandable/expandable';
     pronounces: [['спальня', 'спальни', 'спален'], ['кровать', 'кровати', 'кроватей'], ['ванная комната', 'ванные комнаты', 'ванных комнат']],
     declension: true
   }),
-  $('#dd3').trigger('click'),
+  $('#dd3').find('input').trigger('click'),
   $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(0).trigger('click').trigger('click'),
   $('#dd3').siblings('.dropdown__menu-option_open').find('.button_increment').eq(1).trigger('click').trigger('click'),
   $('#init-text_input').addClass('text-input_hovered').val('This is pretty awesome'),
