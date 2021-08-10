@@ -1,6 +1,7 @@
 import './assets/scss/main.scss';
 import './templates/colors-and-type.scss';
 import './templates/form-elements.scss';
+import './templates/cards.scss';
 import 'jquery-ui-bundle'; // это надо как-то не так делать. import()? require.ensure?
 import './vendors/js/jquery.inputmask.min.js'; // тоже не
 import './blocks/dropdown/dropdown';
