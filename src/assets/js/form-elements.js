@@ -1,3 +1,16 @@
+import '../../assets/scss/main.scss';
+import '../../templates/form-elements.scss';
+import 'jquery-ui/ui/widget.js'; // это надо как-то не так делать. import()? require.ensure?
+import '../../vendors/js/jquery.inputmask.min.js'; // тоже не
+import '../../blocks/dropdown/dropdown';
+import '../../blocks/datepicker/datepicker';
+import '../../blocks/date-filter/date-filter';
+import '../../blocks/like-button/like-button';
+import '../../blocks/rate-button/rate-button';
+import '../../blocks/range-slider/range-slider';
+import '../../blocks/pagination/paginations';
+import '../../blocks/expandable/expandable';
+
 (function() {
   $('#mask').inputmask('99.99.9999', {"placeholder": "ДД.ММ.ГГГГ"});
   $('#like-inited').trigger('click'),

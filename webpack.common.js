@@ -19,25 +19,14 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    'form-elements': `${PATHS.src}/assets/js/form-elements.js`,
+    'colors-and-type': `${PATHS.src}/assets/js/colors-and-type.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist
   },
- /* optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /node_modules/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },
-  */module: {
+  module: {
     rules: [
       {
         test: /\.pug$/,
@@ -47,11 +36,11 @@ module.exports = {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
-        name: '[name].[ext]'
+          name: '[name].[ext]'
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -65,19 +54,7 @@ module.exports = {
             options: {sourceMap: true}
           }
         ]
-      }, {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {sourceMap: true}
-          }, {
-            loader: 'postcss-loader',
-            options: {sourceMap: true, postcssOptions: {config: `src/js/postcss.config.js`}}
-          }
-        ]
-      }
+      },
     ]
   },
   plugins: [
