@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .rate-button__button {
   position: absolute;
@@ -7,7 +7,7 @@
 }
 
 .rate-button__label {
-  background: v.$accent-gradient;
+  background: vars.$accent-gradient;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;

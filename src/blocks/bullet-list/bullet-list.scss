@@ -1,6 +1,6 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .bullet-list__item::marker {
-  color: v.$primary-color25;
+  color: vars.$primary-color25;
   font-size: 32px;
 }

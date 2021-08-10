@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .date-filter-wrap {
   width: inherit;
@@ -11,6 +11,6 @@
   cursor: pointer;
   top: 11px;
   right: 11px;
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
   height: 12px;
 }

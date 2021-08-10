@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .dropdown {
   height: 100%;
@@ -10,20 +10,20 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   &:hover,&:active,&:focus {
-    border-color: v.$primary-color50;
-    color: v.$primary-color75;
+    border-color: vars.$primary-color50;
+    color: vars.$primary-color75;
   }
 }
 
 .dropdown_open>.dropdown__value {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border-color: v.$primary-color50;
-  color: v.$primary-color75;
+  border-color: vars.$primary-color50;
+  color: vars.$primary-color75;
 }
 
 .dropdown_open>.dropdown__expand-icon {
-  color: v.$primary-color75;
+  color: vars.$primary-color75;
 }
 
 .dropdown__value {
@@ -31,7 +31,7 @@
   width: 100%;
   outline: none;
   box-sizing: border-box;
-  border: 1px solid v.$primary-color25;
+  border: 1px solid vars.$primary-color25;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 12px 15px;
@@ -42,7 +42,7 @@
   position: absolute;
   top: 11px;
   right: 11px;
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
 }
 
 .dropdown__list {
@@ -55,9 +55,9 @@
   z-index: 1;
   background-color: white;
   width: 100%;
-  border-left: 1px solid v.$primary-color50;
-  border-bottom: 1px solid v.$primary-color50;
-  border-right: 1px solid v.$primary-color50;;
+  border-left: 1px solid vars.$primary-color50;
+  border-bottom: 1px solid vars.$primary-color50;
+  border-right: 1px solid vars.$primary-color50;;
   box-sizing: border-box;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -87,8 +87,8 @@
   width: 30px;
   height: 30px;
   border-radius: 22px;
-  border: 1px solid v.$primary-color50;
-  color: v.$primary-color50;
+  border: 1px solid vars.$primary-color50;
+  color: vars.$primary-color50;
   background-color: white;
 }
 
@@ -100,14 +100,14 @@
 .dropdown__button {
   cursor: pointer;
   text-transform: uppercase;
-  font: v.$h3;
-  color: v.$accent-color;
+  font: vars.$h3;
+  color: vars.$accent-color;
   appearance: none;
   border: none;
   background: transparent;
   transition: color 0.4s;
   &:hover,&:focus,&:active {
-    color: v.$primary-color50;
+    color: vars.$primary-color50;
   }
   &_disabled {
     visibility: hidden;

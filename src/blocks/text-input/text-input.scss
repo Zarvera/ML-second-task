@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .text-input__flex-wrap {
   display: flex;
@@ -8,17 +8,17 @@
   width: 100%;
   box-sizing: border-box;
   padding: 12px 15px;
-  border: 1px solid v.$primary-color25;
+  border: 1px solid vars.$primary-color25;
   border-radius: 4px;
   outline: none;
-  font: v.$body;
-  color: v.$primary-color25;
+  font: vars.$body;
+  color: vars.$primary-color25;
   &::placeholder {
-    color: v.$primary-color25;
+    color: vars.$primary-color25;
   }
   &:hover,&:focus,&:active,&_hovered {
-    border: 1px solid v.$primary-color50;
-    color: v.$primary-color75;
+    border: 1px solid vars.$primary-color50;
+    color: vars.$primary-color75;
   }
   &_with-button {
     @extend .text-input;
@@ -30,7 +30,7 @@
   cursor: pointer;
   appearance: none;
   border: none;
-  color: v.$accent-color;
+  color: vars.$accent-color;
   background-color: transparent;
   width: 44px;
   margin-left: -44px;

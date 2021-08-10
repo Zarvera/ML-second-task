@@ -1,19 +1,19 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .like-button {
   cursor: pointer;
   box-sizing: border-box;
   width: 40px;
   height: 20px;
-  border: 1px solid v.$primary-color25;
+  border: 1px solid vars.$primary-color25;
   border-radius: 10px;
-  color: v.$primary-color25;
+  color: vars.$primary-color25;
   display: flex;
   &_state_liked {
-    color: v.$accent-color;
-    border-color: v.$accent-color;
+    color: vars.$accent-color;
+    border-color: vars.$accent-color;
     &>.like-button__symbol.material-icons {
-    background: v.$accent-gradient;
+    background: vars.$accent-gradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     }

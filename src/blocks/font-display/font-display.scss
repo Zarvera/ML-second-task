@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .font-display {
     display: flex;
@@ -19,7 +19,7 @@
     width: 37px;
     &_shaded {
         @extend .tag-string;
-        color: v.$primary-color25;
+        color: vars.$primary-color25;
         font-weight: 400;
     }
 }

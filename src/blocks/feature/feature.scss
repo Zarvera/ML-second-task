@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .feature-wrap {
   display: flex;
@@ -25,5 +25,5 @@
 }
 
 .feature__text_bold {
-  font: v.$rich;
+  font: vars.$rich;
 }

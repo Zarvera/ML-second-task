@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .fieldset {
   border: none;
@@ -17,8 +17,8 @@
 }
 
 .fieldset__legend {
-  font: v.$h3;
-  color: v.$primary-color100;
+  font: vars.$h3;
+  color: vars.$primary-color100;
   text-transform: uppercase;
   padding-bottom: 5px;
 }

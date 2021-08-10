@@ -1,8 +1,8 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .page-link,
 .current {
-  font: v.$h3;
+  font: vars.$h3;
 }
 
 .demo-pag>ul>li>span,
@@ -23,21 +23,21 @@
 }
 
 li.active>.current {
-  background: v.$accent-gradient;
+  background: vars.$accent-gradient;
   border-radius: 22px;
   border: none;
   box-shadow: none;
 }
 
 .page-link:not(.specifity-increase) {
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
 }
 
 .page-link.prev:not(.specifity-increase),
 .page-link.next:not(.specifity-increase) {
   font-family: 'Material Icons';
   text-transform: none;
-  background: v.$selection-gradient;
+  background: vars.$selection-gradient;
   border-radius: 22px;
   border: none;
   box-shadow: none;

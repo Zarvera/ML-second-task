@@ -1,5 +1,5 @@
 @use '../../../node_modules/air-datepicker/dist/css/datepicker.css';
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .date-picker {
   position: relative;
@@ -12,7 +12,7 @@
   cursor: pointer;
   top: 11px;
   right: 11px;
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
   height: 12px;
 }
 
@@ -23,13 +23,13 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 15px;
-  border: 1px solid v.$primary-color25;
+  border: 1px solid vars.$primary-color25;
   border-radius: 4px;
   outline: none;
-  font: v.$body;
-  color: v.$primary-color25;
+  font: vars.$body;
+  color: vars.$primary-color25;
   &:hover,&:focus,&:active {
-    border: 1px solid v.$primary-color50;
-    color: v.$primary-color75;
+    border: 1px solid vars.$primary-color50;
+    color: vars.$primary-color75;
   }
 }

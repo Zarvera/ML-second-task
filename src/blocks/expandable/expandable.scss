@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .expandable__header {
   padding: 5px 0 14px 0;
@@ -12,7 +12,7 @@
 }
 
 .expandable__icon {
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
   padding: 0 10px;
 }
 

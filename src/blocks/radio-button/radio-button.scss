@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .radio-container {
   display: flex;
@@ -12,7 +12,7 @@
 }
 
 .radio-button__label {
-  color: v.$primary-color50;
+  color: vars.$primary-color50;
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -25,7 +25,7 @@
     height: 18px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid v.$primary-color25;
+    border: 1px solid vars.$primary-color25;
     border-radius: 50%;
     margin-right: 10px;
     background-repeat: no-repeat;
@@ -39,10 +39,10 @@
   z-index: -1;
   opacity: 0;
   &:not(:disabled)+.radio-button__label:hover::before {
-    border: 1px solid v.$accent-color;
+    border: 1px solid vars.$accent-color;
   }
   &:checked+.radio-button__label::before {
-    border-color: v.$accent-color;
+    border-color: vars.$accent-color;
   }
   &:checked+.radio-button__label::after {
     content: '';
@@ -52,6 +52,6 @@
     width: 12px;
     border-radius: 50%;
     left: 4px;
-    background: v.$accent-gradient;
+    background: vars.$accent-gradient;
   }
 }

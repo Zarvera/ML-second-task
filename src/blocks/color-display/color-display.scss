@@ -1,4 +1,4 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .color-display {
   display: flex;
@@ -15,16 +15,16 @@
     flex-direction: column;
   }
   &__color-code {
-    font: v.$code;
+    font: vars.$code;
   }
 }
 
 .color-block {
-  &_primary-color100 {background-color: v.$primary-color100;}
-  &_primary-color75 {background-color: v.$primary-color75;}
-  &_primary-color50 {background-color: v.$primary-color50;}
-  &_primary-color25 {background-color: v.$primary-color25;}
-  &_primary-color5 {background-color: v.$primary-color5;}
-  &_accent-color {background-color: v.$accent-color;}
-  &_selection-color {background-color: v.$selection-color;}
+  &_primary-color100 {background-color: vars.$primary-color100;}
+  &_primary-color75 {background-color: vars.$primary-color75;}
+  &_primary-color50 {background-color: vars.$primary-color50;}
+  &_primary-color25 {background-color: vars.$primary-color25;}
+  &_primary-color5 {background-color: vars.$primary-color5;}
+  &_accent-color {background-color: vars.$accent-color;}
+  &_selection-color {background-color: vars.$selection-color;}
 }

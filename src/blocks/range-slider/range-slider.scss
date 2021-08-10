@@ -1,8 +1,8 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .noUi-target:not(.specifity-increase) {
   border-radius: 3px;
-  border: 1px solid v.$primary-color25;
+  border: 1px solid vars.$primary-color25;
   box-shadow: none;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .noUi-connect:not(.specifity-increase) {
-  background: v.$selection-gradient;
+  background: vars.$selection-gradient;
 }
 
 .noUi-horizontal .noUi-handle:not(.specifity-increase) {
@@ -19,7 +19,7 @@
   height: 14px;
   border-radius: 50%;
   border: 2px solid #FFFFFF;
-  background: v.$selection-gradient;
+  background: vars.$selection-gradient;
   box-shadow: none;
   right: -12px;
   top: -5px;

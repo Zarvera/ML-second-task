@@ -1,28 +1,28 @@
-@use '../util/vars' as v;
+@use '../../assets/scss/vars';
 
 .button {
   cursor: pointer;
   text-transform: uppercase;
-  font: v.$h3;
-  color: v.$accent-color;
+  font: vars.$h3;
+  color: vars.$accent-color;
   appearance: none;
   border: none;
   background: transparent;
   transition: color 0.4s;
   &:hover,&:focus,&:active,&_state_hovered {
-    color: v.$primary-color50;
+    color: vars.$primary-color50;
   }
 }
 
 .button_style_border {
   cursor: pointer;
   text-transform: uppercase;
-  font: v.$h3;
-  color: v.$accent-color;
+  font: vars.$h3;
+  color: vars.$accent-color;
   appearance: none;
   background:
     linear-gradient(#FFF, #FFF) padding-box,
-    v.$accent-gradient border-box;
+    vars.$accent-gradient border-box;
   border: 2px solid transparent;
   padding: 14px 20px 15px 20px;
   border-radius: 22px;
@@ -35,11 +35,11 @@
 .button_style_filled {
   cursor: pointer;
   text-transform: uppercase;
-  font: v.$h3;
+  font: vars.$h3;
   color: #FFFFFF;
   appearance: none;
   border: none;
-  background: v.$accent-gradient;  
+  background: vars.$accent-gradient;  
   padding: 14px 20px 15px 20px;
   border-radius: 22px;
   transition: opacity 0.4s;
@@ -57,11 +57,11 @@
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  font: v.$h3;
+  font: vars.$h3;
   color: #FFFFFF;
   appearance: none;
   border: none;
-  background: v.$accent-gradient;  
+  background: vars.$accent-gradient;  
   border-radius: 22px;
   transition: opacity 0.4s;
   padding: 0 20px;
