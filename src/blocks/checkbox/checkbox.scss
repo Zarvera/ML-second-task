@@ -3,7 +3,6 @@
 .checkbox {
   display: flex;
   align-items: center;
-  padding: 5px 0;
   &:first-of-type {
     padding-top: 0;
   }
@@ -54,6 +53,7 @@
   align-items: center;
   user-select: none;
   position: relative;
+  padding-bottom: 4px;
   &::before {
     content: '';
     cursor: pointer;

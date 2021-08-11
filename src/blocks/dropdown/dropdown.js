@@ -1,3 +1,5 @@
+import 'jquery-ui/ui/widget.js'; // это надо как-то не так делать. import()? require.ensure?
+
 (function($) {
   $.widget('zrv.dropdownstepper', {
     options: {

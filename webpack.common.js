@@ -21,6 +21,7 @@ module.exports = {
   entry: {
     'form-elements': `${PATHS.src}/assets/js/form-elements.js`,
     'colors-and-type': `${PATHS.src}/assets/js/colors-and-type.js`,
+    'cards': `${PATHS.src}/assets/js/cards.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -83,7 +84,8 @@ module.exports = {
     }),
     ...PAGES.map(page => new HtmlWebpackPlugin ({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
+      filename: `./${page.replace(/\.pug/,'.html')}`,
+      chunks: [`${page.slice(0, -4)}`]
       }))
   ],
 };

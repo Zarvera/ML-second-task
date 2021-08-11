@@ -1,0 +1,1 @@
+import '../../vendors/js/jquery.inputmask.min.js'

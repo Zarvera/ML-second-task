@@ -1,7 +1,6 @@
 import '../../assets/scss/main.scss';
 import '../../templates/form-elements.scss';
-import 'jquery-ui/ui/widget.js'; // это надо как-то не так делать. import()? require.ensure?
-import '../../vendors/js/jquery.inputmask.min.js'; // тоже не
+import '../../blocks/text-input/text-input';
 import '../../blocks/dropdown/dropdown';
 import '../../blocks/datepicker/datepicker';
 import '../../blocks/date-filter/date-filter';

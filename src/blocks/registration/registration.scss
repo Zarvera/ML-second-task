@@ -1,0 +1,34 @@
+@use '../text-input/text-input.scss';
+@use '../radio-button/radio-button.scss';
+@use '../fieldset/fieldset.scss';
+@use '../checkbox/checkbox.scss';
+@use '../button/button.scss';
+
+.registration-wrap {
+  max-width: 380px;
+  padding: 40px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.checkbox+.button_style_form-submit {
+  margin-bottom: 30px;
+}
+
+.registration__header,
+.text-input+.radio-container,
+.radio-container+.fieldset,
+.fieldset:nth-of-type(2)+.checkbox {
+  margin-bottom: 20px;
+}
+
+.registration__header+.text-input,
+.text-input+.text-input,
+.fieldset:nth-of-type(2)>.text-input {
+  margin-bottom: 10px;
+}
+
+.registration__signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

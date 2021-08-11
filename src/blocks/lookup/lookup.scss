@@ -1,4 +1,26 @@
+@use '../fieldset/fieldset.scss';
+@use '../datepicker/datepicker.scss';
+@use '../dropdown/dropdown.scss';
+@use '../button/button.scss';
+
 .lookup__wrap {
   max-width: 380px;
   padding: 40px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.lookup__header,
+.datepicker-wrap {
+  margin-bottom: 20px;
+}
+
+.datepicker-wrap {
+  display: flex;
+  &>.fieldset {
+    margin-right: 20px;
+  }
+}
+
+.datepicker-wrap+.fieldset {
+  margin-bottom: 30px;
 }

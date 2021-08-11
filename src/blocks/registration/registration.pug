@@ -1,0 +1,23 @@
+include ../text-input/text-input
+include ../radio-button/radio-button
+include ../fieldset/fieldset
+include ../checkbox/checkbox
+include ../button/button
+
+form(action='#' class='registration-wrap')
+  h1(class='registration__header') Регистрация аккаунта
+  +text-input({type: 'text', placeholder: 'Имя'})
+  +text-input({type: 'text', placeholder: 'Фамилия'})
+  +radio-button({label1: 'Мужчина', id1: 'men', label2: 'Женщина', id2: 'woman', name: 'sex'})
+  +fieldset({title: 'дата рождения'})
+    +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', id: 'reg-mask'})
+  +fieldset({title: 'данные для входа в сервис'})
+    +text-input({type: 'email', placeholder: 'Email'})
+    +text-input({type: 'password', placeholder: 'Пароль'})
+  +checkbox({text: 'Получать спецпредложения', id: 'offers', name: 'offers', mod: 'toggle'})
+  +button({type: 'submit', value: 'подобрать номер', style: 'submit'})
+  .registration__signin
+    p Уже есть аккаунт на Toxin
+    +button({type: 'button', value: 'войти', style: 'border'})
+
+  
