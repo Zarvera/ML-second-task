@@ -1,10 +1,17 @@
 @use '../../assets/scss/vars';
+@use '../button/button.scss';
+@use '../fieldset/fieldset.scss';
+@use '../datepicker/datepicker.scss';
+@use '../dropdown/dropdown.scss';
 
 .booking__wrap {
   max-width: 380px;
   padding: 40px 30px 30px 30px;
   box-sizing: border-box;
   background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
 .booking__header {

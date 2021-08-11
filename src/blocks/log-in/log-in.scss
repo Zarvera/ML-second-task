@@ -1,0 +1,32 @@
+@use '../../assets/scss/vars';
+@use '../button/button.scss';
+@use '../text-input/text-input.scss';
+
+.log-in__wrap {
+  padding: 40px 30px 32px 30px;
+  max-width: 380px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.log-in__header,
+.log-in__wrap .text-input:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+
+.log-in__wrap .text-input:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.log-in__wrap .button_style_form-submit {
+  margin-bottom: 30px;
+}
+
+.log-in__registration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
