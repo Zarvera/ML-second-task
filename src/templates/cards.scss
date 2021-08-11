@@ -1,2 +1,7 @@
 @use '../blocks/lookup/lookup.scss';
 @use '../blocks/registration/registration.scss';
+@use '../blocks/booking/booking.scss';
+
+body {
+  background-color: #E5E5E5;
+}

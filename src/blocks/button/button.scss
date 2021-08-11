@@ -24,7 +24,9 @@
     linear-gradient(#FFF, #FFF) padding-box,
     vars.$accent-gradient border-box;
   border: 2px solid transparent;
-  padding: 14px 20px 15px 20px;
+  padding: 12px 17px 13px 18px;
+  min-width: 99px;
+  min-height: 44px;
   border-radius: 22px;
   transition: opacity 0.4s;
   &:hover,&:focus,&:active,&_state_hovered {
@@ -66,7 +68,8 @@
   transition: opacity 0.4s;
   &::after {
     position: absolute;
-    right: 18px;
+    right: 10px;
+    top: 15px;
     content: 'arrow_forward';
     font-family: 'Material Icons';
     text-transform: none;

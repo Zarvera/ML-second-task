@@ -15,9 +15,9 @@
 }
 
 .registration__header,
-.text-input+.radio-container,
-.radio-container+.fieldset,
-.fieldset:nth-of-type(2)+.checkbox {
+.registration-wrap .text-input+.radio-container,
+.registration-wrap .radio-container+.fieldset,
+.registration-wrap .fieldset:nth-of-type(2)+.checkbox {
   margin-bottom: 20px;
 }
 
