@@ -12,9 +12,9 @@ import 'jquery-ui/ui/widget.js'; // это надо как-то не так де
       this.btn_Dec = this.element.find('.button_decrement');
       if(this.options.buttons) {
         let $buttons = $(
-          `<div class="dropdown__item">
-            <button type="button" class="dropdown__button button_clear">ОЧИСТИТЬ</button>
-            <button type="button" class="dropdown__button button_accept">ПРИМЕНИТЬ</button>
+          `<div class='dropdown__item'>
+            <button type='button' class='dropdown__button button_clear'>ОЧИСТИТЬ</button>
+            <button type='button' class='dropdown__button button_accept'>ПРИМЕНИТЬ</button>
           </div>`);
         this.element.children('.dropdown__list').append($buttons);
         this.btn_Clear = this.element.find('.button_clear');
@@ -110,13 +110,13 @@ import 'jquery-ui/ui/widget.js'; // это надо как-то не так де
       console.log(this.element);
     },
     _setOption: function( key, value ) {
-      if ( key === "pronounces" ) {
+      if ( key === 'pronounces' ) {
         this.element.pronounces( value );
       }
-      if ( key === "declension" ) {
+      if ( key === 'declension' ) {
         this.element.declension( value );
       }
-      if ( key === "buttons" ) {
+      if ( key === 'buttons' ) {
         this.element.buttons( value );
       }
       this._super( key, value );

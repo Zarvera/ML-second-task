@@ -1,0 +1,31 @@
+include ../rate-button/rate-button
+
+mixin room-card(attr)
+  .room-card
+    .room-card__image
+      img(src='./assets/img/888.png', alt='фото номера 888')
+      .room-card__slider_prev
+        button(type="button" class="room-card__button_prev material-icons") expand_more
+      .room-card__slider_next
+        button(type="button" class="room-card__button_next material-icons") expand_more
+      .room-card__pages
+        .room-card__page 
+        .room-card__page 
+        .room-card__page 
+        .room-card__page 
+    .room-card__info-wrap
+      .room-card__info
+        .room-card__number-and-price
+          .room-card__number
+            span(class='room-card__prefix') № 
+            span(class='room-card__number') 888
+            span(class='room-card__luxe') люкс
+          .room-card__price
+            span(class='room-card__price-number') 9 990₽ 
+            span(class='room-card__price-currency') в сутки
+        .room-card__rating-and-reviews
+          .room-card__rating
+            +rate-button({id: attr.rateId})
+          .room-card__reviews
+            span(class='room-card__reviews-number') #{attr.revN}
+            span(class='room-card__reviews')  Отзывов

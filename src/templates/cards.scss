@@ -2,7 +2,15 @@
 @use '../blocks/registration/registration.scss';
 @use '../blocks/booking/booking.scss';
 @use '../blocks/log-in/log-in.scss';
+@use '../blocks/room-card/room-card.scss';
 
 body {
   background-color: #E5E5E5;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  padding: 150px 140px 140px 140px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 40px;
 }
