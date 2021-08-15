@@ -69,8 +69,16 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: `${PATHS.src}/${PATHS.assets}img`,
-          to: `${PATHS.assets}img`
+          context: `${PATHS.src}/blocks/`,
+          from: "**/*.jpg",
+          to: `${PATHS.assets}img/[name][ext]`,
+          noErrorOnMissing: true
+        },
+        {
+          context: `${PATHS.src}/blocks/`,
+          from: "**/*.png",
+          to: `${PATHS.assets}img/[name][ext]`,
+          noErrorOnMissing: true
         },
         {
           from: `${PATHS.src}/${PATHS.assets}fonts`,

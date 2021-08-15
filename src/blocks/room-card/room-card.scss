@@ -78,6 +78,9 @@
   &:not(:last-child) {
     margin-right: 0.25rem;
   }
+  &_selected {
+    background-color: white;
+  }
 }
 
 .room-card__info-wrap {
