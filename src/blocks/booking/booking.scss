@@ -44,37 +44,49 @@
 .booking__price-number {
   font: vars.$rich;
   color: vars.$primary-color50;
+  margin-bottom: 1px;
 }
 
 .booking__price-currency {
   font: vars.$add;
   color: vars.$primary-color50;
+  margin-bottom: 2px;
+  margin-left: 4px;
 }
 
 .booking__price-breakdown {
-  display: grid;
-  grid-template-columns: 12fr 1fr 4fr;
-  row-gap: 15px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.booking__breakdown-line {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  &:nth-child(2) {
+    margin-bottom: 16px;
+  }
+}
+
+.booking__breakdown-line>.price-breakdown__item:first-child {
+  max-width: 70%;
+}
+
+.price-breakdown__item_info {
+  position: absolute;
+  color: vars.$primary-color25;
+  border: 1px solid vars.$primary-color25;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  right: 25%;
 }
 
 .booking__wrap .dropdown {
   margin-bottom: 22px;
-}
-
-.price-breakdown__item {
-  &:nth-of-type(5),
-  &:nth-of-type(8) {
-    color: vars.$primary-color25;
-    border: 1px solid vars.$primary-color25;
-    border-radius: 50%;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-  }
-  &:nth-of-type(3n) {
-    text-align: end;
-  }
 }
 
 .total__wrap {

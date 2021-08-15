@@ -20,15 +20,17 @@ include ../fieldset/fieldset
   +fieldset({title: 'гости'})
     +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "bookdd"})
   .booking__price-breakdown
-    span(class='price-breakdown__item') 9 990₽ х 4 суток
-    span(class='price-breakdown__item')
-    span(class='price-breakdown__item') 39 960₽
-    span(class='price-breakdown__item') Сбор за услуги: скидка 2 179₽
-    span(class='price-breakdown__item') i
-    span(class='price-breakdown__item') 0₽
-    span(class='price-breakdown__item') Сбор за дополнительные услуги
-    span(class='price-breakdown__item') i
-    span(class='price-breakdown__item') 300₽
+    .booking__breakdown-line
+      span(class='price-breakdown__item') 9 990₽ х 4 суток
+      span(class='price-breakdown__item') 39 960₽
+    .booking__breakdown-line 
+      span(class='price-breakdown__item') Сбор за услуги: скидка 2 179₽
+      span(class='price-breakdown__item_info') i
+      span(class='price-breakdown__item') 0₽
+    .booking__breakdown-line 
+      span(class='price-breakdown__item') Сбор за дополнительные услуги
+      span(class='price-breakdown__item_info') i
+      span(class='price-breakdown__item') 300₽
   .total__wrap
     span(class='booking__total') Итого
     span(class='booking__total-line')
