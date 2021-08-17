@@ -10,4 +10,7 @@ mixin button(attr)
     } else {
       classname = 'button';
     }
+    if(attr.isForHeader) {
+      classname = classname.concat(' button_style_header')
+    }
   button(type=attr.type, class=classname) #{attr.value}

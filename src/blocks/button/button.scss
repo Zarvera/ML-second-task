@@ -25,7 +25,6 @@
     vars.$accent-gradient border-box;
   border: 2px solid transparent;
   padding: 12px 17px 13px 18px;
-  min-width: 99px;
   min-height: 44px;
   border-radius: 22px;
   transition: opacity 0.4s;
@@ -69,16 +68,24 @@
   &::after {
     position: absolute;
     right: 10px;
-    top: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     content: 'arrow_forward';
     font-family: 'Material Icons';
     text-transform: none;
     font-size: 24px;
     font-weight: 400;
-    font-style: normal;
     line-height: 15px;
   }
   &:hover,&:focus,&:active,&_state_hovered {
     opacity: 0.5;
+  }
+}
+
+.button_style_header {
+  padding: 6px 18px;
+  min-height: 34px;
+  &.button_style_form-submit::after {
+    content: none;
   }
 }

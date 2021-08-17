@@ -22,6 +22,7 @@ module.exports = {
     'form-elements': `${PATHS.src}/assets/js/form-elements.js`,
     'colors-and-type': `${PATHS.src}/assets/js/colors-and-type.js`,
     'cards': `${PATHS.src}/assets/js/cards.js`,
+    'header-and-footer': `${PATHS.src}/assets/js/header-and-footer.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,

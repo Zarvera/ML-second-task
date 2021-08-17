@@ -1,0 +1,49 @@
+@use '../../assets/scss/vars';
+@use '../button/button.scss';
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 9.7222%;
+  padding-right: 9.9%;
+  padding-top: 0.94rem;
+  padding-bottom: 0.7rem;
+}
+
+.header__navigation,
+.header__navigation-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation-wrap {
+  padding-bottom: 4px;
+  &>*:not(:last-child) {
+    margin-right: 1.38rem;
+  }
+}
+
+.header__navigation-item {
+  list-style: none;
+  white-space: nowrap;
+  &:first-child {
+    font: vars.$rich;
+  }
+  &:not(:last-child) {
+    margin-right: 1.25rem;
+  }
+  &:nth-of-type(2)::after,
+  &:nth-of-type(5)::after {
+    content: 'expand_more';
+    font-family: 'Material Icons';
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}

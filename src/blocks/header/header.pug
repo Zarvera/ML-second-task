@@ -1,0 +1,15 @@
+include ../button/button
+
+mixin header(attr)
+  .header
+    .header__logo
+      img(src="'../../assets/svg/logo.svg", alt="")
+    nav(class="header__navigation-wrap")
+      ul(class="header__navigation")
+        li(class="header__navigation-item") О нас
+        li(class="header__navigation-item") Услуги
+        li(class="header__navigation-item") Вакансии
+        li(class="header__navigation-item") Новости
+        li(class="header__navigation-item") Соглашения
+      +button({type: 'button', value: 'войти', style: 'border', isForHeader: true})
+      +button({type: 'submit', value: 'зарегистрироваться', style: 'submit', isForHeader: true})
