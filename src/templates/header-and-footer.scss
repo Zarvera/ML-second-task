@@ -1,9 +1,16 @@
 @use '../blocks/header/header.scss';
+@use '../blocks/footer/footer.scss';
 
 body {
   background-color: #E5E5E5;
 }
 
-.header:first-child {
+.header,
+.footer {
   margin-bottom: 40px;
+}
+
+.mobile-wrap {
+  width: 768px;
+  margin: 0 auto;
 }
