@@ -11,5 +11,9 @@ mixin header(attr)
         li(class="header__navigation-item") Вакансии
         li(class="header__navigation-item") Новости
         li(class="header__navigation-item") Соглашения
-      +button({type: 'button', value: 'войти', style: 'border', isForHeader: true})
-      +button({type: 'submit', value: 'зарегистрироваться', style: 'submit', isForHeader: true})
+      if attr.isAuthorised
+        .header__separator
+        span(class='header__username') Юлий Цезарь
+      else
+        +button({type: 'button', value: 'войти', style: 'border', isForHeader: true})
+        +button({type: 'submit', value: 'зарегистрироваться', style: 'submit', isForHeader: true})
