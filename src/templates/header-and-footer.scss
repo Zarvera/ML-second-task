@@ -14,3 +14,9 @@ body {
   width: 768px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .mobile-wrap {
+    width: auto;
+  }
+}

@@ -7,7 +7,6 @@
 
 .footer__panel {
   display: flex;
-  width: max-content;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 9.7222%;
@@ -17,6 +16,7 @@
 .footer__logo-and-info {
   margin-right: 40px;
   flex-basis: 16.25rem;
+  flex-shrink: 0;
 }
 
 .footer__logo {
@@ -106,6 +106,30 @@
   }
   & .footer__copyright {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer__panel {
+    flex-flow: column;
+    align-items: stretch;
+    padding: 3% 5%;
+  }
+  .footer__logo-and-info {
+    flex-basis: auto;
+    margin-right: 0;
+  }
+  .footer__info {
+    display: none;
+  }
+  .footer__navigation {
+    justify-content: space-between;
+  }
+  .footer__navigation-section:not(#specifity) {
+    margin-right: 0;
+  }
+  .footer__copyright-bar {
+    padding: 15px 5%;
   }
 }
 
