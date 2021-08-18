@@ -83,7 +83,7 @@
 }
 
 .footer__social {
-  transform: translateY(-2px);
+  transform: translateY(4px);
 }
 
 .footer__social-icon:not(:last-child) {
@@ -149,5 +149,6 @@
   }
   .footer__copyright {
     margin-bottom: 20px;
+    text-align: center;
   }
 }
