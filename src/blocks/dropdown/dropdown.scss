@@ -40,7 +40,8 @@
 .dropdown__expand-icon {
   cursor: pointer;
   position: absolute;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 11px;
   color: vars.$primary-color50;
 }

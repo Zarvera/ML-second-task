@@ -47,26 +47,26 @@ html(lang="en")
               +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
         .wrapper-column
           .checkbox-wrap
-            +fieldset({title: 'checkbox buttons', size: 'smaller', padding: 'large'})
+            +fieldset({title: 'checkbox buttons', size: 'smaller'})
               +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
               +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
               +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
-            +fieldset({title: 'radio buttons', size: 'smaller', padding: 'large'})
+            +fieldset({title: 'radio buttons', size: 'smaller'})
               +radio-button({label1: 'Мужчина', id1: 'men', label2: 'Женщина', id2: 'woman', name: 'sex'})
-            +fieldset({title: 'toggle', size: 'small', padding: 'large'})
+            +fieldset({title: 'toggle', size: 'small'})
               +checkbox({text: 'Получать спецпредложения', id: 'deals', name: 'deals', mod: 'toggle', checked: true})
               +checkbox({text: 'Получать спецпредложения', id: 'deals2', name: 'deals', mod: 'toggle'})
-            +fieldset({title: 'like button', padding: 'large'})
+            +fieldset({title: 'like button'})
               .separating-wrap_small
                 +like-button({value: '2'})
                 +like-button({id: 'like-inited', value: '11'})
-            +fieldset({title: 'rate button', padding: 'large'})
+            +fieldset({title: 'rate button'})
               .separating-wrap
                 +rate-button({id: 'rate-inited4'})
                 +rate-button({id: 'rate-inited5'})
         .wrapper-column
           .range-slider-wrap
-            +fieldset({title: 'range slider', size: 'small', padding: 'large', mod: 'double'})
+            +fieldset({title: 'range slider', size: 'small', mod: 'double'})
               +range-slider
           +fieldset({title: 'buttons', padding: 'large'})
             .button-wrap
@@ -80,7 +80,7 @@ html(lang="en")
               +button({type: 'button', value: 'click me'})
             .button-wrap
               +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
-          +fieldset({title: 'pagination', padding: 'large'})
+          +fieldset({title: 'pagination'})
             +pagination({text: '1-12 из 100+ вариантов аренды'})
       .wrapper-row
         .wrapper-column
@@ -111,11 +111,11 @@ html(lang="en")
             +checkbox({id: 'tv1', name: 'tv1', text: 'Телевизор'})
             +checkbox({id: 'shampoo1', name: 'shampoo1', text: 'Шампунь'})
         .wrapper-column
-          +fieldset({title: 'rich checkbox buttons', padding: 'large'})
+          +fieldset({title: 'rich checkbox buttons'})
             +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
             +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
         .wrapper-column
-          +fieldset({title: 'bullet list', padding: 'large'})
+          +fieldset({title: 'bullet list'})
             +bullet-list({list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
       .wrapper-row
         .wrapper-column

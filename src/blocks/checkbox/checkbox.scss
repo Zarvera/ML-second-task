@@ -3,9 +3,7 @@
 .checkbox {
   display: flex;
   align-items: center;
-  &:first-of-type {
-    padding-top: 0;
-  }
+  padding-top: 11px;
 }
 
 .checkbox__label-container {

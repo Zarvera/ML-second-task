@@ -17,7 +17,7 @@
 
 
 .wrapper {
-  margin: 10vh 10vw;
+  margin: 143px 141px;
 }
 
 .wrapper-row {
@@ -45,6 +45,10 @@
 .text-fields-wrap>fieldset:not(:first-child),
 .wrapper-row:nth-child(2)>.wrapper-column:first-child>.fieldset:nth-child(2) {
   margin-top: 20px;
+}
+
+.text-fields-wrap>fieldset:nth-child(4) {
+  margin-top: 23px;
 }
 
 .dropdown-wrap>fieldset,
