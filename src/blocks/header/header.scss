@@ -11,6 +11,12 @@
   padding-right: 9.7222%;
   padding-top: 0.94rem;
   padding-bottom: 0.7rem;
+  &_position_fixed {
+    @extend .header;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header__navigation-wrap {

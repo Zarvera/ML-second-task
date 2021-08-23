@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin header(attr)
-  .header
+  div(class=(attr.isSticky ? "header_position_fixed" : "header"))
     .header__logo
       img(src="../../assets/svg/logo.svg", alt="toxin logo")
     nav(class="header__navigation-wrap")

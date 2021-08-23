@@ -1,42 +1,43 @@
 include ../text-input/text-input
 
-.footer
-  .footer__panel
-    .footer__logo-and-info
-      .footer__logo
+mixin footer
+  .footer
+    .footer__panel
+      .footer__logo-and-info
+        .footer__logo
+          img(src="../../assets/svg/logo.svg", alt="toxin logo")
+        .footer__info
+          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      nav(class="footer__navigation")
+        section(class="footer__navigation-section")
+          h3(class="footer__section-header") навигация
+          ul(class="footer__section-list")
+            li(class="footer__navigation-item") О нас
+            li(class="footer__navigation-item") Новости
+            li(class="footer__navigation-item") Служба поддержки
+            li(class="footer__navigation-item") Услуги
+        section(class="footer__navigation-section")
+          h3(class="footer__section-header") о нас
+          ul(class="footer__section-list")
+            li(class="footer__navigation-item") О сервисе
+            li(class="footer__navigation-item") Наша команда
+            li(class="footer__navigation-item") Вакансии
+            li(class="footer__navigation-item") Инвесторы
+        section(class="footer__navigation-section")
+          h3(class="footer__section-header") служба поддержки
+          ul(class="footer__section-list")
+            li(class="footer__navigation-item") Соглашения
+            li(class="footer__navigation-item") Сообщества
+            li(class="footer__navigation-item") Связь с нами
+        section(class="footer__navigation-section")
+          h3(class="footer__section-header") подписка
+          p(class="footer__subscription") Получайте специальные предложения и новости сервиса
+          +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
+    .footer__copyright-bar
+      .footer__logo_for-mobile
         img(src="../../assets/svg/logo.svg", alt="toxin logo")
-      .footer__info
-        p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-    nav(class="footer__navigation")
-      section(class="footer__navigation-section")
-        h3(class="footer__section-header") навигация
-        ul(class="footer__section-list")
-          li(class="footer__navigation-item") О нас
-          li(class="footer__navigation-item") Новости
-          li(class="footer__navigation-item") Служба поддержки
-          li(class="footer__navigation-item") Услуги
-      section(class="footer__navigation-section")
-        h3(class="footer__section-header") о нас
-        ul(class="footer__section-list")
-          li(class="footer__navigation-item") О сервисе
-          li(class="footer__navigation-item") Наша команда
-          li(class="footer__navigation-item") Вакансии
-          li(class="footer__navigation-item") Инвесторы
-      section(class="footer__navigation-section")
-        h3(class="footer__section-header") служба поддержки
-        ul(class="footer__section-list")
-          li(class="footer__navigation-item") Соглашения
-          li(class="footer__navigation-item") Сообщества
-          li(class="footer__navigation-item") Связь с нами
-      section(class="footer__navigation-section")
-        h3(class="footer__section-header") подписка
-        p(class="footer__subscription") Получайте специальные предложения и новости сервиса
-        +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
-  .footer__copyright-bar
-    .footer__logo_for-mobile
-      img(src="../../assets/svg/logo.svg", alt="toxin logo")
-    p(class="footer__copyright") Copyright © 2018 Toxin отель. Все права защищены.
-    .footer__social
-      img(class="footer__social-icon", src="../../assets/svg/twitter.svg", alt="twitter")
-      img(class="footer__social-icon", src="../../assets/svg/facebook.svg", alt="facebook")
-      img(class="footer__social-icon", src="../../assets/svg/instagram.svg", alt="instagram")
+      p(class="footer__copyright") Copyright © 2018 Toxin отель. Все права защищены.
+      .footer__social
+        img(class="footer__social-icon", src="../../assets/svg/twitter.svg", alt="twitter")
+        img(class="footer__social-icon", src="../../assets/svg/facebook.svg", alt="facebook")
+        img(class="footer__social-icon", src="../../assets/svg/instagram.svg", alt="instagram")

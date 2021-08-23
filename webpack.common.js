@@ -23,6 +23,7 @@ module.exports = {
     'colors-and-type': `${PATHS.src}/assets/js/colors-and-type.js`,
     'cards': `${PATHS.src}/assets/js/cards.js`,
     'header-and-footer': `${PATHS.src}/assets/js/header-and-footer.js`,
+    'landing-page': `${PATHS.src}/assets/js/landing-page.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,

@@ -1,0 +1,20 @@
+@use '../blocks/header/header.scss';
+@use '../blocks/footer/footer.scss';
+
+.body-layout {
+  height: 100%;
+}
+
+.body-wrapper {
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
