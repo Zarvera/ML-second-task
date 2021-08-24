@@ -1,5 +1,7 @@
 extends ../layout/layout
+include ../blocks/lookup/lookup
 
 block content
-  .landing-wrap
-    include ../blocks/lookup/lookup
+  .landing__wrap
+    +lookup
+    p(class="landing__text") Лучшие номера для вашей работы, отдыха и просто вдохновения

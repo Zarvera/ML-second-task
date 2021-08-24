@@ -1,16 +1,25 @@
 @use '../layout/layout.scss';
 @use '../blocks/lookup/lookup.scss';
 
-.landing-wrap {
+.landing__wrap {
   background: url('../../assets/img/landing3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   padding-left: 9.7222%;
   padding-top: 4.86111%;
   padding-right: 9.3055%;
   padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
-.landing-wrap>.lookup__wrap {
-  margin-bottom: 22.222%;
+.landing__wrap>.lookup__wrap {
+  margin-bottom: 27.45%;
+}
+
+.landing__text {
+  text-align: right;
+  max-width: 18.5625rem;
+  align-self: flex-end;
 }
