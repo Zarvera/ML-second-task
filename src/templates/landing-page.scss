@@ -1,1 +1,16 @@
 @use '../layout/layout.scss';
+@use '../blocks/lookup/lookup.scss';
+
+.landing-wrap {
+  background: url('../../assets/img/landing3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 9.7222%;
+  padding-top: 4.86111%;
+  padding-right: 9.3055%;
+  padding-bottom: 18px;
+}
+
+.landing-wrap>.lookup__wrap {
+  margin-bottom: 22.222%;
+}

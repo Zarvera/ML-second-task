@@ -77,6 +77,11 @@ module.exports = {
           noErrorOnMissing: true
         },
         {
+          from: `${PATHS.src}/assets/img/`,
+          to: `${PATHS.assets}img/[name][ext]`,
+          noErrorOnMissing: true
+        },
+        {
           context: `${PATHS.src}/blocks/`,
           from: "**/*.png",
           to: `${PATHS.assets}img/[name][ext]`,
