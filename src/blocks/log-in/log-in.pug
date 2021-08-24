@@ -1,11 +1,12 @@
 include ../text-input/text-input
 include ../button/button
 
-.log-in__wrap
-  h1(class='log-in__header') Войти
-  +text-input({type: 'email', placeholder: 'Email'})
-  +text-input({type: 'password', placeholder: 'Пароль'})
-  +button({type: 'submit', value: 'войти', style: 'submit'})
-  .log-in__registration
-    p Нет аккаунта на Toxin?
-    +button({type: 'button', value: 'создать', style: 'border'})
+mixin log-in
+  .log-in__wrap
+    h1(class='log-in__header') Войти
+    +text-input({type: 'email', placeholder: 'Email'})
+    +text-input({type: 'password', placeholder: 'Пароль'})
+    +button({type: 'submit', value: 'войти', style: 'submit'})
+    .log-in__registration
+      p Нет аккаунта на Toxin?
+      +button({type: 'button', value: 'создать', style: 'border'})

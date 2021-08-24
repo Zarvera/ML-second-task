@@ -3,36 +3,37 @@ include ../dropdown/dropdown
 include ../button/button
 include ../fieldset/fieldset
 
-.booking__wrap
-  .booking__header
-    .booking__room
-      span(class='booking__prefix') № 
-      span(class='booking__number') 888
-      span(class='booking__luxe') люкс
-    .booking__price
-      span(class='booking__price-number') 9 990₽ 
-      span(class='booking__price-currency') в сутки
-  .datepicker-wrap
-    +fieldset({title: 'прибытие', size: 'tiny'})
-      +datepicker('from')
-    +fieldset({title: 'выезд', size: 'tiny'})
-      +datepicker('to')
-  +fieldset({title: 'гости'})
-    +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "bookdd"})
-  .booking__price-breakdown
-    .booking__breakdown-line
-      span(class='price-breakdown__item') 9 990₽ х 4 суток
-      span(class='price-breakdown__item') 39 960₽
-    .booking__breakdown-line 
-      span(class='price-breakdown__item') Сбор за услуги: скидка 2 179₽
-      span(class='price-breakdown__item_info') i
-      span(class='price-breakdown__item') 0₽
-    .booking__breakdown-line 
-      span(class='price-breakdown__item') Сбор за дополнительные услуги
-      span(class='price-breakdown__item_info') i
-      span(class='price-breakdown__item') 300₽
-  .total__wrap
-    span(class='booking__total') Итого
-    span(class='booking__total-line')
-    span(class='booking__total-price') 38 081₽
-  +button({type: 'submit', value: 'забронировать', style: 'submit'})
+mixin booking
+  .booking__wrap
+    .booking__header
+      .booking__room
+        span(class='booking__prefix') № 
+        span(class='booking__number') 888
+        span(class='booking__luxe') люкс
+      .booking__price
+        span(class='booking__price-number') 9 990₽ 
+        span(class='booking__price-currency') в сутки
+    .datepicker-wrap
+      +fieldset({title: 'прибытие', size: 'tiny'})
+        +datepicker('from')
+      +fieldset({title: 'выезд', size: 'tiny'})
+        +datepicker('to')
+    +fieldset({title: 'гости'})
+      +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "bookdd"})
+    .booking__price-breakdown
+      .booking__breakdown-line
+        span(class='price-breakdown__item') 9 990₽ х 4 суток
+        span(class='price-breakdown__item') 39 960₽
+      .booking__breakdown-line 
+        span(class='price-breakdown__item') Сбор за услуги: скидка 2 179₽
+        span(class='price-breakdown__item_info') i
+        span(class='price-breakdown__item') 0₽
+      .booking__breakdown-line 
+        span(class='price-breakdown__item') Сбор за дополнительные услуги
+        span(class='price-breakdown__item_info') i
+        span(class='price-breakdown__item') 300₽
+    .total__wrap
+      span(class='booking__total') Итого
+      span(class='booking__total-line')
+      span(class='booking__total-price') 38 081₽
+    +button({type: 'submit', value: 'забронировать', style: 'submit'})

@@ -1,3 +1,9 @@
+include ../blocks/booking/booking
+include ../blocks/lookup/lookup
+include ../blocks/registration/registration
+include ../blocks/log-in/log-in
+include ../blocks/room-card/room-card
+
 doctype html
 html(lang="en")
   head
@@ -6,11 +12,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Cards
   body 
-    include ../blocks/lookup/lookup
-    include ../blocks/booking/booking
+    +lookup
+    +booking
     .datepicker_inline
-    include ../blocks/registration/registration
-    include ../blocks/log-in/log-in
-    include ../blocks/room-card/room-card
+    +registration
+    +log-in
     +room-card({rateId: 'cards5', luxe: true, reviewsNumber: '145', roomNumber: '888', roomPrice: '9 990'})
     +room-card({rateId: 'cards4', reviewsNumber: '65', roomNumber: '840', roomPrice: '9 900'})
