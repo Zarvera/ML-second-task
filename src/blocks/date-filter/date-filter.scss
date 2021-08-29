@@ -14,3 +14,21 @@
   color: vars.$primary-color50;
   height: 12px;
 }
+
+.my-datepicker {
+  cursor: pointer;
+  width: inherit;
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  padding-left: 13px;
+  border: 1px solid vars.$primary-color25;
+  border-radius: 4px;
+  outline: none;
+  font: vars.$body;
+  color: vars.$primary-color25;
+  &:hover,&:focus,&:active {
+    border: 1px solid vars.$primary-color50;
+    color: vars.$primary-color75;
+  }
+}
