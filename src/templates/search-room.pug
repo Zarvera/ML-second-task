@@ -6,15 +6,16 @@ include ../blocks/range-slider/range-slider
 include ../blocks/checkbox/checkbox
 include ../blocks/expandable/expandable
 include ../blocks/pagination/pagination
+include ../blocks/room-card/room-card
 
 block content
   .search-room__wrap
-    form(action="")
+    form(class="search-room__form", action="")
       +fieldset({title: 'даты пребывания в отеле'})
         +date-filter
       +fieldset({title: 'гости'})
         +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd1"})
-      +fieldset({title: 'диапазоны цен', size: 'small', mod: 'double'})
+      +fieldset({title: 'диапазон цены', size: 'small', mod: 'double'})
         +range-slider
       +fieldset({title: 'правила дома'})
         +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
@@ -32,3 +33,19 @@ block content
         +checkbox({id: 'crib', name: 'crib', text: 'Кроватка'})
         +checkbox({id: 'tv', name: 'tv', text: 'Телевизор'})
         +checkbox({id: 'shampoo', name: 'shampoo', text: 'Шампунь'})
+    .search-room__search-results
+      h1(class='search-room__header') Номера, которые мы для вас подобрали
+      .search-room__cards
+        +room-card({reviewsNumber: '145', roomNumber: '888', roomPrice: '9 990', luxe: true})
+        +room-card({reviewsNumber: '65', roomNumber: '840', roomPrice: '9 900'})
+        +room-card({reviewsNumber: '35', roomNumber: '980', roomPrice: '8 500', luxe: true})
+        +room-card({reviewsNumber: '19', roomNumber: '856', roomPrice: '7 300'})
+        +room-card({reviewsNumber: '44', roomNumber: '740', roomPrice: '6 000'})
+        +room-card({reviewsNumber: '56', roomNumber: '982', roomPrice: '5 800'})
+        +room-card({reviewsNumber: '45', roomNumber: '678', roomPrice: '5 500'})
+        +room-card({reviewsNumber: '39', roomNumber: '450', roomPrice: '5 300'})
+        +room-card({reviewsNumber: '77', roomNumber: '350', roomPrice: '5 000'})
+        +room-card({reviewsNumber: '25', roomNumber: '666', roomPrice: '5 000'})
+        +room-card({reviewsNumber: '15', roomNumber: '444', roomPrice: '5 000'})
+        +room-card({reviewsNumber: '55', roomNumber: '888', roomPrice: '5 000'})
+      +pagination({text: '1-12 из 100+ вариантов аренды'})
