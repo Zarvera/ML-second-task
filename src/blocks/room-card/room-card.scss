@@ -61,7 +61,7 @@
 .room-card__pages {
   position: absolute;
   display: flex;
-  bottom: 11.5%;
+  bottom: 10.5%;
   right: 6%;
 }
 
@@ -90,7 +90,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
 }
 
 .room-card__prefix {
@@ -107,7 +107,7 @@
   font: vars.$h3;
   color: vars.$accent-color;
   text-transform: uppercase;
-  vertical-align: text-bottom;
+  margin-left: 8px;
 }
 
 .room-card__reviews-number,
@@ -131,4 +131,5 @@
 
 .room-card__reviews {
   color: vars.$primary-color50;
+  transform: translate(-2px, -2px);
 }

@@ -15,8 +15,8 @@ mixin room-card(attr)
         .room-card__page 
     .room-card__info-wrap
       .room-card__info
-        .room-card__number-and-price
-          .room-card__number
+        span(class='room-card__number-and-price')
+          span(class='room-card__number')
             span(class='room-card__prefix') № 
             span(class='room-card__number') #{attr.roomNumber}
             if attr.luxe  
