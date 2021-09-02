@@ -1,31 +1,33 @@
 @use '../../assets/scss/vars';
 
-.noUi-target:not(.specifity-increase) {
-  border-radius: 3px;
-  border: 1px solid vars.$primary-color25;
-  box-shadow: none;
+
+.range-slider {
+  padding-top: 18px;
 }
 
-.noUi-horizontal:not(.specifity-increase) {
-  height: 6px;
+.range-slider__slider {
+  margin-bottom: 12px;
 }
 
-.noUi-connect:not(.specifity-increase) {
+.range-slider__text {
+  font: vars.$add;
+  color: vars.$primary-color50;
+}
+
+.ui-slider-horizontal:not(.specifity-override) {
+  height: 4px;
+}
+
+.ui-slider .ui-slider-handle:not(.specifity-override) {
   background: vars.$selection-gradient;
-}
-
-.noUi-horizontal .noUi-handle:not(.specifity-increase) {
-  width: 14px;
-  height: 14px;
+  border: 2px solid white;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  background: vars.$selection-gradient;
-  box-shadow: none;
-  right: -12px;
-  top: -5px;
+  height: 12px;
+  width: 12px;
+  top: -0.45em;
+  margin-left: -0.8em;
 }
 
-.noUi-handle:not(.specifity-increase)::before, .noUi-handle:not(.specifity-increase)::after {
-  content: none;
-  display: none;
+.ui-widget-header:not(.specifity-override) {
+  background: vars.$selection-gradient;
 }

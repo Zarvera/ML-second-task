@@ -1,23 +1,10 @@
-import noUiSlider from 'nouislider';
-import 'nouislider/dist/nouislider.css';
+import "jquery-ui/ui/widgets/slider";
+import "jquery-ui/themes/base/all.css";
 
-var nonLinearStepSlider = document.getElementById('range-slider');
-var nonLinearStepSliderValueElement = nonLinearStepSlider.previousSibling.childNodes[1];
-
-noUiSlider.create(nonLinearStepSlider, {
-  start: [5000, 10000],
-  connect: true,
-  range: {
-    'min': 1000,
-    'max': 15000
-  },
-  step: 100,
-  format: {
-    to: (v) => parseFloat(v).toFixed(0) + '₽',
-    from: (v) => parseFloat(v).toFixed(0)
-  }
-});
-
-nonLinearStepSlider.noUiSlider.on('update', function (values) {
-  nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+$(".range-slider__slider").slider({
+  range: true,
+  min: 100,
+  max: 15500,
+  step: 10,
+  values: [5000, 10000]
 });
