@@ -1,17 +1,22 @@
 @use '../../assets/scss/vars';
 
-.expandable__header {
-  padding: 5px 0 14px 0;
+.expandable__fieldset-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.expandable__heading {
+.expandable__fieldset {
+  border: none;
+  align-self: center;
+}
+
+.expandable__legend {
   text-transform: uppercase;
+  font: vars.$h3;
+  color: vars.$primary-color100;
 }
 
-.expandable__icon {
+.expandable__expand-icon {
   color: vars.$primary-color50;
   padding: 0 10px;
 }

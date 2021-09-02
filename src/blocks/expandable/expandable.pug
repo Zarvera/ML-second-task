@@ -1,7 +1,8 @@
 mixin expandable(attr)
-  .expandable(id=attr.id)
-    .expandable__header
-      h3(class='expandable__heading') #{attr.header}
-      div(class='expandable__icon material-icons') expand_more
+  .expandable
+    .expandable__fieldset-wrap
+      fieldset(class="expandable__fieldset")
+        legend(class="expandable__legend") #{attr.header}
+      span(class="expandable__expand-icon material-icons") expand_more
     .expandable__content
-        block
+      block
