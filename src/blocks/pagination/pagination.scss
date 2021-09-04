@@ -1,5 +1,17 @@
 @use '../../assets/scss/vars';
 
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//Defaults override
+
+.simple-pagination:not(.specifity-override) {
+  padding: 0 0 10px 0;
+}
+
 .page-link,
 .current {
   font: vars.$h3;
@@ -55,4 +67,9 @@ li.active>.current {
 .current.prev,
 .current.next {
   display: none;
+}
+
+.light-theme a:not(.specifity-override),
+.light-theme span:not(.specifity-override) {
+  margin: 0;
 }
