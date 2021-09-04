@@ -3,6 +3,7 @@
 
 .footer {
   background-color: white;
+  border-top: 1px solid vars.$primary-color25;
 }
 
 .footer__panel {
@@ -83,7 +84,7 @@
 }
 
 .footer__social {
-  transform: translateY(4px);
+  transform: translateY(-2px);
 }
 
 .footer__social-icon:not(:last-child) {
