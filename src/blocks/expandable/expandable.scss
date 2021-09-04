@@ -1,6 +1,7 @@
 @use '../../assets/scss/vars';
 
 .expandable__fieldset-wrap {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
