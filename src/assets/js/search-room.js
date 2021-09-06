@@ -5,6 +5,7 @@ import '../../blocks/date-filter/date-filter';
 import '../../blocks/range-slider/range-slider';
 import '../../blocks/pagination/paginations';
 import '../../blocks/expandable/expandable';
+import '../../blocks/room-card/room-card';
 
 $("#dd1").dropdownstepper({buttons: true});
 $('#dd2').dropdownstepper( {
