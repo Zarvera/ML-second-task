@@ -11,3 +11,6 @@ $('#dd2').dropdownstepper( {
   pronounces: [['спальня', 'спальни', 'спален'], ['кровать', 'кровати', 'кроватей'], ['ванная комната', 'ванные комнаты', 'ванных комнат']],
   declension: true
 });
+$(".search-room__form-toggler").on("click", function() {
+  $(this).siblings(".search-room__form").toggleClass("search-room__form_state_visible");
+})
