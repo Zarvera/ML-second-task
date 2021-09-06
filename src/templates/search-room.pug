@@ -10,29 +10,32 @@ include ../blocks/room-card/room-card
 
 block content
   .search-room__wrap
-    form(class="search-room__form", action="")
-      +fieldset({title: 'даты пребывания в отеле'})
-        +date-filter
-      +fieldset({title: 'гости'})
-        +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd1"})
-      +fieldset({title: 'диапазон цены', size: 'small', mod: 'double'})
-        +range-slider
-      +fieldset({title: 'правила дома'})
-        +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
-        +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
-        +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
-      +fieldset({title: 'доступность'})
-        +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
-        +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
-      +fieldset({title: 'удобства номера'})
-        +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd2"})
-      +expandable({header: 'дополнительные удобства', id: 'exp1'})
-        +checkbox({id: 'lunch', name: 'lunch', text: 'Завтрак'})
-        +checkbox({id: 'table', name: 'table', text: 'Письменный стол'})
-        +checkbox({id: 'chair', name: 'chair', text: 'Стул для кормления'})
-        +checkbox({id: 'crib', name: 'crib', text: 'Кроватка'})
-        +checkbox({id: 'tv', name: 'tv', text: 'Телевизор'})
-        +checkbox({id: 'shampoo', name: 'shampoo', text: 'Шампунь'})
+    .search-room__responsive-wrap
+      form(class="search-room__form", action="")
+        +fieldset({title: 'даты пребывания в отеле'})
+          +date-filter
+        +fieldset({title: 'гости'})
+          +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd1"})
+        +fieldset({title: 'диапазон цены', size: 'small', mod: 'double'})
+          +range-slider
+        +fieldset({title: 'правила дома'})
+          +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
+          +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
+          +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
+        +fieldset({title: 'доступность'})
+          +checkbox({id: 'hall', name: 'hall', mod: 'rich', text: 'Широкий коридор', addition: 'Ширина коридоров в номере не менее 91 см.'})
+          +checkbox({id: 'helper', name: 'helper', mod: 'rich', text: 'Помошник для инвалидов', addition: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+        +fieldset({title: 'удобства номера'})
+          +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "dd2"})
+        +expandable({header: 'дополнительные удобства', id: 'exp1'})
+          +checkbox({id: 'lunch', name: 'lunch', text: 'Завтрак'})
+          +checkbox({id: 'table', name: 'table', text: 'Письменный стол'})
+          +checkbox({id: 'chair', name: 'chair', text: 'Стул для кормления'})
+          +checkbox({id: 'crib', name: 'crib', text: 'Кроватка'})
+          +checkbox({id: 'tv', name: 'tv', text: 'Телевизор'})
+          +checkbox({id: 'shampoo', name: 'shampoo', text: 'Шампунь'})
+      div(class="search-room__form-toggler")
+        div(class="search-room__toggler-icon material-icons") expand_more
     .search-room__search-results
       h1(class='search-room__header') Номера, которые мы для вас подобрали
       .search-room__cards
