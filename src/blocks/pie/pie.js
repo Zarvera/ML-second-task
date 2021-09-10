@@ -18,7 +18,7 @@ new Chart(ctx, {
   data: {
     labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
     datasets: [{
-      cutout: '80%',
+      cutout: '90%',
       data: [0, 65, 65, 130],
       backgroundColor: [
       gradientDisappointment,
@@ -29,14 +29,12 @@ new Chart(ctx, {
     }]
   },
   options: {
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: 1,
     plugins: {
       legend: {
-        position: 'right',
-        reverse: true,
-        labels: {
-          usePointStyle: true
-        }
+        display: false
       }
     }
   },
@@ -48,9 +46,10 @@ new Chart(ctx, {
         chart.ctx.textBaseline = 'middle';
         chart.ctx.textAlign = 'center';
         chart.ctx.font = '700 24px Montserrat';
-        chart.ctx.fillText(theCenterText, canvasBounds.width/4, canvasBounds.height*0.40);
+        chart.ctx.fillStyle = '#BC9CFF';
+        chart.ctx.fillText(theCenterText, canvasBounds.width*0.50, canvasBounds.height*0.43);
         chart.ctx.font = '700 12px Montserrat';
-        chart.ctx.fillText('голосов', canvasBounds.width/4, canvasBounds.height*0.60 )
+        chart.ctx.fillText('ГОЛОСОВ', canvasBounds.width*0.50, canvasBounds.height*0.61 )
       }
   }]
 })
