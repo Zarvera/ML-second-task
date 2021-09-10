@@ -2,7 +2,16 @@
   display: flex;
 }
 
-.collage__smaller-pictures {
+.collage__main-picture {
+  width: 69%;
+}
+
+.collage__small-pictures {
   display: flex;
   flex-direction: column;
+  width: 32%;
+}
+
+.collage__small-picture {
+  flex-grow: 1;
 }
