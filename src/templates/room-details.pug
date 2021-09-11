@@ -4,6 +4,20 @@ include ../blocks/comment/comment
 include ../blocks/bullet-list/bullet-list
 include ../blocks/booking/booking
 include ../blocks/pie/pie
+include ../blocks/collage/collage
 
 block content
-  +pie
+  main(class="main-wrap")
+    +collage
+    section(class="room-details-wrap")
+      .room-details
+        article(class="room-info-wrap")
+          p(class="article-heading") Сведения о номере
+          +feature({icon: 'insert_emoticon', text: 'Шумопоглощающие стены', bold: 'Комфорт'})
+          +feature({icon: 'location_city', text: 'Окно в каждой из спален', bold: 'Удобство'})
+          +feature({icon: 'whatshot', text: 'Номер оснащён камином', bold: 'Уют'})
+        article(class="room-poll-wrap")
+          p(class="article-heading") Впечатления от номера
+          +pie
+      form(action="")
+        +booking 

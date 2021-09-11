@@ -5,3 +5,26 @@
 @use '../blocks/bullet-list/bullet-list.scss';
 @use '../blocks/booking/booking.scss';
 @use '../blocks/pie/pie.scss';
+@use '../blocks/collage/collage.scss';
+
+.room-details-wrap {
+  display: flex;
+  padding: 70px 9.7222%;
+}
+
+.room-details {
+  display: flex;
+}
+
+.room-details>.room-info-wrap {
+  margin-right: 106px;
+}
+
+.article-heading {
+  font: vars.$h2;
+  color: vars.$primary-color100;
+}
+
+.room-poll-wrap>.article-heading {
+  margin-bottom: 18px;
+}
