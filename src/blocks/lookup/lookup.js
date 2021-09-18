@@ -1,3 +1,3 @@
 (function() {
-  $('#lookupdd').dropdownstepper({buttons: true})
+  $('.dropdown').dropdownstepper({buttons: true})
 })();
