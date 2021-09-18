@@ -6,7 +6,7 @@
 
 .booking__wrap {
   max-width: 380px;
-  padding: 40px 30px 30px 30px;
+  padding: 40px 29px 29px 29px;
   box-sizing: border-box;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -14,10 +14,18 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
+.booking__wrap>.date-picker__wrap {
+  margin-bottom: 20px;
+}
+
+.booking__wrap>.fieldset {
+  margin-bottom: 21px;
+}
+
 .booking__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .booking__prefix {
@@ -34,6 +42,7 @@
   font: vars.$h3;
   color: vars.$accent-color;
   text-transform: uppercase;
+  margin-left: 8px;
 }
 
 .booking__price {
@@ -64,10 +73,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 14px;
-  &:nth-child(2) {
-    margin-bottom: 16px;
-  }
+  margin-bottom: 15px;
 }
 
 .booking__breakdown-line>.price-breakdown__item:first-child {
@@ -83,10 +89,6 @@
   width: 1.1rem;
   height: 1.1rem;
   right: 25%;
-}
-
-.booking__wrap .dropdown {
-  margin-bottom: 22px;
 }
 
 .total__wrap {
@@ -110,5 +112,4 @@
   white-space: nowrap;
   font: vars.$h2;
   color: vars.$primary-color100;
-  margin-right: -9px;
 }
