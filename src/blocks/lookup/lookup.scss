@@ -1,3 +1,4 @@
+@use '../../assets/scss/vars';
 @use '../fieldset/fieldset.scss';
 @use '../datepicker/datepicker.scss';
 @use '../dropdown/dropdown.scss';
@@ -5,7 +6,7 @@
 
 .lookup__wrap {
   max-width: 380px;
-  padding: 40px 30px 30px 30px;
+  padding: 39px 29px 29px 29px;
   box-sizing: border-box;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -13,18 +14,16 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-.lookup__header,
-.datepicker-wrap {
-  margin-bottom: 21px;
+.lookup__header {
+  font: vars.$h1;
+  color: vars.$primary-color100;
+  margin-bottom: 22px;
 }
 
-.datepicker-wrap {
-  display: flex;
-  &>.fieldset {
-    margin-right: 20px;
-  }
+.lookup__header+.date-picker__wrap {
+  margin-bottom: 22px;
 }
 
-.lookup__wrap .datepicker-wrap+.fieldset {
+.date-picker__wrap+.fieldset {
   margin-bottom: 30px;
 }

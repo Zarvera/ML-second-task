@@ -6,12 +6,8 @@ include ../button/button
 
 mixin lookup
   form(action='#' class='lookup__wrap')
-    h1(class='lookup__header') Найдём номера под ваши пожелания
-    .datepicker-wrap
-      +fieldset({title: 'прибытие', size: 'tiny'})
-        +datepicker('from')
-      +fieldset({title: 'выезд', size: 'tiny'})
-        +datepicker('to')
+    p(class='lookup__header') Найдём номера под ваши пожелания
+    +datepicker({from: "прибытие", to: "выезд"})
     +fieldset({title: 'гости'})
       +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "lookupdd"})
     +button({type: 'submit', value: 'подобрать номер', style: 'submit'})
