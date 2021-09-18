@@ -13,11 +13,7 @@ mixin booking
       .booking__price
         span(class='booking__price-number') 9 990₽ 
         span(class='booking__price-currency') в сутки
-    .datepicker-wrap
-      +fieldset({title: 'прибытие', size: 'tiny'})
-        +datepicker('from')
-      +fieldset({title: 'выезд', size: 'tiny'})
-        +datepicker('to')
+    +datepicker({from: "прибытие", to: "выезд"})
     +fieldset({title: 'гости'})
       +dropdown({options: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', id: "bookdd"})
     .booking__price-breakdown
