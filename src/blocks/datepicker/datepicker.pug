@@ -1,9 +1,22 @@
-mixin datepicker(point)
-  .date-picker
-    input(type='text',
-      data-range="true",
-      data-multiple-dates-separator=" - ",
-      placeholder='ДД.ММ.ГГГГ',
-      class='my-datepicker datepicker__field_' + point,
-      readonly)
-    span(class='material-icons date-picker__expand-icon') expand_more
+include ../fieldset/fieldset
+
+mixin datepicker(attr)
+  .date-picker__wrap
+    +fieldset({title: attr.from})
+      .date-picker
+        input(type='text',
+          data-range="true",
+          data-multiple-dates-separator=" - ",
+          placeholder='ДД.ММ.ГГГГ',
+          class='datepicker__input datepicker__field_from',
+          readonly)
+        span(class='material-icons date-picker__expand-icon') expand_more
+    +fieldset({title: attr.to})
+      .date-picker
+        input(type='text',
+          data-range="true",
+          data-multiple-dates-separator=" - ",
+          placeholder='ДД.ММ.ГГГГ',
+          class='datepicker__input datepicker__field_to',
+          readonly)
+        span(class='material-icons date-picker__expand-icon') expand_more

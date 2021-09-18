@@ -1,10 +1,15 @@
 @use '../../../node_modules/air-datepicker/dist/css/datepicker.css';
 @use '../../assets/scss/vars';
+@use '../fieldset/fieldset.scss';
+
+.date-picker__wrap {
+  display: flex;
+}
 
 .date-picker {
   position: relative;
-  width: inherit;
   display: flex;
+  margin-right: 20px;
 }
 
 .date-picker__expand-icon {
@@ -16,10 +21,11 @@
   height: 12px;
 }
 
-.my-datepicker {
+.datepicker__input {
   cursor: pointer;
-  width: inherit;
   box-sizing: border-box;
+  width: 50%;
+  min-width: 150px;
   padding-top: 11px;
   padding-bottom: 13px;
   padding-left: 13px;
