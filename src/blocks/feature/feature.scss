@@ -2,10 +2,12 @@
 
 .feature-wrap {
   display: flex;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   padding-bottom: 20px;
   &:not(:first-child) {
     padding-top: 20px;
+  }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   }
 }
 
