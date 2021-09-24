@@ -1,21 +1,43 @@
+@use '../../assets/scss/vars';
+@use '../like-button/like-button.scss';
+
+.comment:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
 .comment__wrap-top {
   display: flex;
 }
 
-.comment__picture {
-  margin-right: 10px;
+.comment__picture-wrap {
+  margin-right: 8.5px;
+  transform: translate(-1px, 1px);
 }
 
-.comment__details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.comment__picture {
+  border-radius: 50%;
+}
+
+.comment__name {
+  font: vars.$rich;
+  margin-top: 4px;
+}
+
+.comment__date {
+  margin-top: 6px;
 }
 
 .comment__wrap-bottom {
   display: flex;
+  margin-top: 9px;
 }
 
 .comment__like {
-  margin-right: 18px;
+  margin-right: 13.5px;
+  margin-left: 3px;
+}
+
+.comment__text {
+  line-height: 24px;
+  transform: translateY(-2px);
 }

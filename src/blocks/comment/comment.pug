@@ -1,12 +1,14 @@
+include ../like-button/like-button
+
 mixin comment(attr)
   .comment
     .comment__wrap-top
-      .comment__picture
-        img(src='./assets/img/murad.png', alt='murad')
+      .comment__picture-wrap
+        img(class='comment__picture', src='./assets/img/murad.png', alt='murad')
       .comment__details
-        .details__name #{attr.name}
-        .details__date #{attr.date}
+        p.comment__name #{attr.name}
+        p.comment__date #{attr.date}
     .comment__wrap-bottom
       .comment__like
-        block
-      .comment__text #{attr.text}
+        +like-button({value: attr.likeValue})
+      p.comment__text #{attr.text}
