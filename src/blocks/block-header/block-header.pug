@@ -1,0 +1,8 @@
+mixin block-header(attr)
+  span(class="block-header")
+    if attr.shifted
+      span(class="block-header__main-header main-header_position_shifted") #{attr.mainHeader}
+    else
+      span(class="block-header__main-header") #{attr.mainHeader}
+    if attr.secondaryHeader
+      span(class="block-header__secondary-header") #{attr.secondaryHeader}
