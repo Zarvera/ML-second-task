@@ -1,4 +1,5 @@
 mixin bullet-list(attr)
   ul(class='bullet-list')
     each val in attr.list
-      li(class='bullet-list__item') #{val}
+      li(class='bullet-list__item')
+        span(class="bullet-list__item-text") #{val}

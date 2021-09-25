@@ -1,6 +1,22 @@
 @use '../../assets/scss/vars';
 
-.bullet-list__item::marker {
-  color: vars.$primary-color25;
-  font-size: 32px;
+.bullet-list {
+  list-style: none;
+}
+
+.bullet-list__item {
+  line-height: 24px;
+}
+
+.bullet-list__item::before {
+  display: inline-block;
+  content: '';
+  background-color: vars.$primary-color25;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.bullet-list__item-text {
+  padding-left: 10px;
 }
