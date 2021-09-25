@@ -10,12 +10,16 @@
 }
 
 .comment__picture-wrap {
+  display: flex;
+  align-items: flex-end;
   margin-right: 8.5px;
-  transform: translate(-1px, 1px);
 }
 
 .comment__picture {
+  border: 2px solid #FFFFFF;
   border-radius: 50%;
+  filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+  transform: translate(-1px, 1px);
 }
 
 .comment__name {
@@ -29,7 +33,7 @@
 
 .comment__wrap-bottom {
   display: flex;
-  margin-top: 9px;
+  margin-top: 13px;
 }
 
 .comment__like {

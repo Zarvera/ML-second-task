@@ -1,14 +1,33 @@
 include ../like-button/like-button
 
 mixin comment(attr)
+  -
+    let userName, postDate, userPic, likeValue, commentText;
+    if(attr.id == "murad") {
+      userName = "Мурад Сарафанов";
+      postDate = "5 дней назад";
+      userPic = "murad";
+      likeValue = 11;
+      commentText = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. " 
+            + "И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.";
+    }
+    if(attr.id == "patricia") {
+      userName = "Патрисия Стёклышкова";
+      postDate = "Неделю назад";
+      userPic = "patricia";
+      likeValue = 2;
+      commentText = "Обслуживание на высоте! Всё аккуратно, чисто. " 
+            + "Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент";
+    }
+
   .comment
     .comment__wrap-top
       .comment__picture-wrap
-        img(class='comment__picture', src='./assets/img/murad.png', alt='murad')
+        img(class="comment__picture", src=`./assets/img/${userPic}.jpg`, alt="user_avatar")
       .comment__details
-        p.comment__name #{attr.name}
-        p.comment__date #{attr.date}
+        p.comment__name #{userName}
+        p.comment__date #{postDate}
     .comment__wrap-bottom
       .comment__like
-        +like-button({value: attr.likeValue})
-      p.comment__text #{attr.text}
+        +like-button({value: likeValue})
+      p.comment__text #{commentText}
