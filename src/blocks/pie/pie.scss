@@ -3,9 +3,9 @@
 }
 
 .pie__canvas-wrap {
-  height: 128px;
+  height: 124px;
   width: 125px;
-  transform: translateX(-3px);
+  transform: translateX(-2.5px);
 }
 
 .pie__legend-wrap {
@@ -13,13 +13,10 @@
   margin-left: 25px;
 }
 
-.pie__legend {
-  margin-bottom: 2px;
-}
-
 .pie__legend-item {
   list-style: none;
   line-height: 24px;
+  white-space: nowrap;
   &:nth-child(1)::before {
     background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
   }
