@@ -1,4 +1,5 @@
 extends ../layout/layout
+include ../blocks/block-header/block-header
 include ../blocks/feature/feature
 include ../blocks/comment/comment
 include ../blocks/bullet-list/bullet-list
@@ -9,15 +10,25 @@ include ../blocks/collage/collage
 block content
   main(class="main-wrap")
     +collage
-    section(class="room-details-wrap")
-      .room-details
-        article(class="room-info-wrap")
-          p(class="article-heading") Сведения о номере
-          +feature({icon: 'insert_emoticon', text: 'Шумопоглощающие стены', bold: 'Комфорт'})
-          +feature({icon: 'location_city', text: 'Окно в каждой из спален', bold: 'Удобство'})
-          +feature({icon: 'whatshot', text: 'Номер оснащён камином', bold: 'Уют'})
-        article(class="room-poll-wrap")
-          p(class="article-heading") Впечатления от номера
-          +pie
+    section(class="room-details")
+      .room-details__info-wrap
+        .room-details__features-and-poll-wrap
+          article(class="room-details__features-wrap")
+            +block-header({mainHeader: "Сведения о номере"})
+            +feature({icon: 'insert_emoticon', text: 'Шумопоглощающие стены', bold: 'Комфорт'})
+            +feature({icon: 'location_city', text: 'Окно в каждой из спален', bold: 'Удобство'})
+            +feature({icon: 'whatshot', text: 'Номер оснащён камином', bold: 'Уют'})
+          article(class="room-details__poll-wrap")
+            +block-header({mainHeader: "Впечатления от номера"})
+            +pie
+        .room-details__comments-wrap
+          +block-header({mainHeader: "Отзывы посетителей номера", secondaryHeader: "2 отзыва"})
+          +comment({id: "murad"})
+          +comment({id: "patricia"})
+        .room-details__rules-and-cancel-wrap
+          .room-details__rules-wrap
+            +block-header({mainHeader: "Правила", shifted: true})
+            +bullet-list({list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          .room-details__cancel-wrap
       form(action="")
         +booking 
