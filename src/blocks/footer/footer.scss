@@ -61,8 +61,11 @@
   list-style: none;
 }
 
-.footer__navigation-item:not(:last-child) {
-  margin-bottom: 20px;
+.footer__navigation-item {
+  color: vars.$primary-color50;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__subscription {
