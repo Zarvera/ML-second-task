@@ -6,6 +6,7 @@ include ../blocks/bullet-list/bullet-list
 include ../blocks/booking/booking
 include ../blocks/pie/pie
 include ../blocks/collage/collage
+include ../blocks/text-block/text-block
 
 block content
   main(class="main-wrap")
@@ -30,5 +31,7 @@ block content
             +block-header({mainHeader: "Правила", shifted: true})
             +bullet-list({list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
           .room-details__cancel-wrap
+            +block-header({mainHeader: "Отмена"})
+            +text-block({text: "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."})
       form(action="")
         +booking 

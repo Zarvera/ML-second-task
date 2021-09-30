@@ -7,10 +7,11 @@
 @use '../blocks/booking/booking.scss';
 @use '../blocks/pie/pie.scss';
 @use '../blocks/collage/collage.scss';
+@use '../blocks/text-block/text-block.scss';
 
 .room-details {
   display: flex;
-  padding: 70px 9.7222%;
+  padding: 70px 9.7222% 62px;
 }
 
 .room-details__info-wrap {
@@ -41,6 +42,19 @@
 
 .room-details__comments-wrap {
   margin-bottom: 30px;
+}
+
+.room-details__rules-and-cancel-wrap {
+  display: flex;
+}
+
+.room-details__rules-wrap {
+  flex-basis: 263px;
+  margin-right: 98px;
+}
+
+.room-details__cancel-wrap {
+  flex-basis: 341px;
 }
 
 @media (min-width: 1441px) {
