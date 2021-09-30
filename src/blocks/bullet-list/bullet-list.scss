@@ -5,7 +5,10 @@
 }
 
 .bullet-list__item {
+  display: flex;
+  align-items: baseline;
   line-height: 24px;
+  margin-bottom: 10px;
 }
 
 .bullet-list__item::before {
@@ -13,7 +16,7 @@
   content: '';
   background-color: vars.$primary-color25;
   border-radius: 50%;
-  width: 10px;
+  min-width: 10px;
   height: 10px;
 }
 
