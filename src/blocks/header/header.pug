@@ -6,11 +6,16 @@ mixin header(attr)
       img(src="../../assets/svg/logo.svg", alt="toxin logo")
     nav(class="header__navigation-wrap")
       ul(class="header__navigation")
-        li(class="header__navigation-item") О нас
-        li(class="header__navigation-item") Услуги
-        li(class="header__navigation-item") Вакансии
-        li(class="header__navigation-item") Новости
-        li(class="header__navigation-item") Соглашения
+        li(class="header__navigation-item")
+          a(class="header__navigation-link" href="/change-me") О нас
+        li(class="header__navigation-item header__navigation-item_with-arrow")
+          a(class="header__navigation-link" href="/change-me") Услуги
+        li(class="header__navigation-item")
+          a(class="header__navigation-link" href="/change-me") Вакансии
+        li(class="header__navigation-item")
+          a(class="header__navigation-link" href="/change-me") Новости
+        li(class="header__navigation-item header__navigation-item_with-arrow")
+          a(class="header__navigation-link" href="/change-me") Соглашения
     if attr.isAuthorised
       .header__separator
       span(class='header__username') Юлий Цезарь
