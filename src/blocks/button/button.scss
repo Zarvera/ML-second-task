@@ -1,70 +1,47 @@
 @use '../../assets/scss/vars';
 
 .button {
+  appearance: none;
   cursor: pointer;
   text-transform: uppercase;
   font: vars.$h3;
   color: vars.$accent-color;
-  appearance: none;
-  border: none;
   background: transparent;
-  transition: color 0.4s;
+  border: none;
+  transition: opacity 0.4s;
   &:hover,&:focus,&:active,&_state_hovered {
-    color: vars.$primary-color50;
+    opacity: 0.5;
   }
 }
 
 .button_style_border {
-  cursor: pointer;
-  text-transform: uppercase;
-  font: vars.$h3;
-  color: vars.$accent-color;
-  appearance: none;
   background:
     linear-gradient(#FFF, #FFF) padding-box,
     vars.$accent-gradient border-box;
   border: 2px solid transparent;
-  padding: 12px 17px 13px 18px;
-  min-height: 44px;
   border-radius: 22px;
-  transition: opacity 0.4s;
-  &:hover,&:focus,&:active,&_state_hovered {
-    opacity: 0.5;
-  }
+  padding: 0 18px;
+  min-height: 44px;
 }
 
 .button_style_filled {
-  cursor: pointer;
-  text-transform: uppercase;
-  font: vars.$h3;
   color: #FFFFFF;
-  appearance: none;
+  background: vars.$accent-gradient; 
   border: none;
-  background: vars.$accent-gradient;  
-  padding: 14px 20px 15px 20px;
   border-radius: 22px;
+  padding: 14px 20px 15px 20px;
   transition: opacity 0.4s;
-  &:hover,&:focus,&:active,&_state_hovered {
-    opacity: 0.5;
-  }
 }
 
 .button_style_form-submit {
+  color: #FFFFFF;
+  background: vars.$accent-gradient; 
+  border: none; 
+  border-radius: 22px;
+  padding: 0 20px;
   position: relative;
-  display: flex;
-  justify-content: center;
   min-height: 44px;
   width: 100%;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  font: vars.$h3;
-  color: #FFFFFF;
-  appearance: none;
-  border: none;
-  background: vars.$accent-gradient;  
-  border-radius: 22px;
-  transition: opacity 0.4s;
   &::after {
     position: absolute;
     right: 10px;
@@ -77,13 +54,9 @@
     font-weight: 400;
     line-height: 15px;
   }
-  &:hover,&:focus,&:active,&_state_hovered {
-    opacity: 0.5;
-  }
 }
 
 .button_style_header {
-  padding: 4px 19px 6px 20px;
   min-height: 34px;
   &.button_style_form-submit::after {
     content: none;
