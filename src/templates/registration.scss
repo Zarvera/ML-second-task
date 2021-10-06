@@ -1,0 +1,22 @@
+@use '../layout/layout.scss';
+@use '../blocks/registration-card/registration-card.scss';
+
+.registration-page-wrap {
+  background: url('../../assets/img/registration.jpg');
+  background-position: center -70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 19px 0 18px 0;
+}
+
+@media (max-width: 1440px) {
+  .registration-page-wrap {
+    background-size: auto;
+  }
+}
+
+.registration-page-wrap>.registration-wrap {
+  transform: translateX(3px);
+}
