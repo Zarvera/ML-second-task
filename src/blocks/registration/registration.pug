@@ -4,7 +4,7 @@ include ../fieldset/fieldset
 include ../checkbox/checkbox
 include ../button/button
 
-mixin registration
+mixin registration-card(attr)
   form(action='#' class='registration-wrap')
     h1(class='registration__header') Регистрация аккаунта
     +text-input({type: 'text', placeholder: 'Имя'})
@@ -16,9 +16,12 @@ mixin registration
       +text-input({type: 'email', placeholder: 'Email'})
       +text-input({type: 'password', placeholder: 'Пароль'})
     +checkbox({text: 'Получать спецпредложения', id: 'offers', name: 'offers', mod: 'toggle'})
-    +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
+    if attr.filledButton == "register"
+      +button({type: 'submit', value: 'зарегестрироваться', style: 'submit'})
+    else
+      +button({type: 'submit', value: 'перейти к оплате', style: 'submit'})
     .registration__signin
       p Уже есть аккаунт на Toxin
-      +button({type: 'button', value: 'войти', style: 'border'})
+      +button({type: 'button', value: 'войти', style: 'border', isForCard: true})
 
   

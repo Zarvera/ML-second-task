@@ -6,7 +6,7 @@
 
 .registration-wrap {
   max-width: 380px;
-  padding: 40px 30px 30px 30px;
+  padding: 39px 29px 29px 29px;
   box-sizing: border-box;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -18,17 +18,27 @@
   margin-bottom: 30px;
 }
 
-.registration__header,
-.registration-wrap .text-input+.radio-container,
-.registration-wrap .radio-container+.fieldset,
-.registration-wrap .fieldset:nth-of-type(2)+.checkbox {
+.registration__header {
+  margin-bottom: 21px;
+}
+
+
+.registration-wrap>.text-input:nth-of-type(1),
+.registration-wrap>.text-input:nth-of-type(2) {
+  margin-bottom: 10px;
+}
+
+.registration-wrap>.fieldset:nth-of-type(1),
+.registration-wrap>.checkbox {
   margin-bottom: 20px;
 }
 
-.registration__header+.text-input,
-.text-input+.text-input,
-.fieldset:nth-of-type(2)>.text-input {
+.fieldset:nth-of-type(2)>.text-input:nth-of-type(1) {
   margin-bottom: 10px;
+}
+
+.radio-container {
+  margin-bottom: 20px;
 }
 
 .registration__signin {
