@@ -13,4 +13,7 @@ mixin button(attr)
     if(attr.isForHeader) {
       classname = classname.concat(' button_style_header')
     }
+    if(attr.isForCard) {
+      classname = classname.concat(' button_style_card')
+    }
   button(type=attr.type, class=classname) #{attr.value}
