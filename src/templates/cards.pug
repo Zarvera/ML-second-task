@@ -1,7 +1,7 @@
 include ../blocks/booking/booking
 include ../blocks/lookup/lookup
 include ../blocks/registration-card/registration-card
-include ../blocks/log-in/log-in
+include ../blocks/log-in-card/log-in-card
 include ../blocks/room-card/room-card
 
 doctype html
@@ -16,6 +16,6 @@ html(lang="en")
     +booking
     .datepicker_inline
     +registration-card({})
-    +log-in
+    +log-in-card
     +room-card({rateId: 'cards5', luxe: true, reviewsNumber: '145', roomNumber: '888', roomPrice: '9 990'})
     +room-card({rateId: 'cards4', reviewsNumber: '65', roomNumber: '840', roomPrice: '9 900'})
