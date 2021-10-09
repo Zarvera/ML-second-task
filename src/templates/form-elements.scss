@@ -17,7 +17,7 @@
 
 
 .wrapper {
-  margin: 143px 141px;
+  padding: 143px 141px;
 }
 
 .wrapper-row {
@@ -33,62 +33,52 @@
 .wrapper-column {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  &:first-child {
+    margin-right: 126px;
+  }
   &:nth-child(2) {
-    margin-left: 126px;
-  }
-  &:nth-child(3) {
-    margin-left: 132px;
+    margin-right: 133px;
   }
 }
 
-.text-fields-wrap>fieldset:not(:first-child),
-.wrapper-row:nth-child(2)>.wrapper-column:first-child>.fieldset:nth-child(2) {
-  margin-top: 20px;
-}
-
-.text-fields-wrap>fieldset:nth-child(4) {
-  margin-top: 23px;
-}
-
-.dropdown-wrap>fieldset,
-.checkbox-wrap>fieldset:not(:first-child) {
-  margin-top: 40px;
-}
-
-.datepicker-wrap {
-  display: flex;
-  margin-top: 40px;
-  &>fieldset:first-child {
-    margin-right: 20px;
-  }
-}
-
-.separating-wrap {
-  display: flex;
-  &>*:nth-child(2) {
-    margin-left: 20px;
-  }
-}
-
-.separating-wrap_small {
-  display: flex;
-  &>*:nth-child(2) {
-  margin-left: 10px;
-  }
-}
-
-.button-wrap {
-  margin-bottom: 30px;
-  &>button:nth-child(2) {
-    margin-left: 20px;
-  }
-}
-
-.range-slider-wrap {
+.text-fields-wrap {
   margin-bottom: 40px;
 }
 
-.wrapper-column>.expandable:first-child {
+.text-fields-wrap,
+.datepicker-wrap {
+  width: 320px;
+}
+
+.datefilter-and-sub-wrap,
+.range-slider-wrap {
+  width: 266px;
+}
+
+.text-fields-wrap>.fieldset:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.text-fields-wrap>.fieldset:nth-child(3) {
+  margin-bottom: 23px;
+}
+
+.datepicker-wrap {
+  margin-bottom: 40px;
+}
+
+.datefilter-and-sub-wrap>.fieldset:first-child {
+  margin-bottom: 41px;
+}
+
+.checkbox-and-radio-wrap {
+  width: 222px;
+}
+
+.like-buttons-wrap {
+  display: flex;
+}
+
+.rate-buttons-wrap {
+  display: flex;
 }

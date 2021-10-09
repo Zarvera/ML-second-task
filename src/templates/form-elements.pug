@@ -37,33 +37,31 @@ html(lang="en")
               +text-input({type: 'text', placeholder: 'ДД.ММ.ГГГГ', id: 'mask'})
           .dropdown-wrap
             .datepicker-wrap
-              +fieldset({title: 'date dropdown', size: 'tiny'})
-                +datepicker('from')
-              +fieldset({title: 'date dropdown', size: 'tiny'})
-                +datepicker('to')
-            +fieldset({title: 'filter date dropdown', size: 'small'})
-              +date-filter
-            +fieldset({title: 'subscription text field', size: 'small'})
-              +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
+              +datepicker({from: "date dropdown", to: "date dropdown"})
+            .datefilter-and-sub-wrap
+              +fieldset({title: 'filter date dropdown', size: 'small'})
+                +date-filter
+              +fieldset({title: 'subscription text field', size: 'small'})
+                +text-input({type: 'email', mod: 'subscription', placeholder: 'Email'})
         .wrapper-column
-          .checkbox-wrap
+          .checkbox-and-radio-wrap
             +fieldset({title: 'checkbox buttons', size: 'smaller'})
               +checkbox({text: 'Можно курить', id: 'smoke', name: 'smoke'})
               +checkbox({text: 'Можно с питомцами', id: 'pets', name: 'pets', checked: true})
               +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'allow-guests', name: 'allow-guests', checked: true})
             +fieldset({title: 'radio buttons', size: 'smaller'})
               +radio-button({label1: 'Мужчина', id1: 'men', label2: 'Женщина', id2: 'woman', name: 'sex'})
-            +fieldset({title: 'toggle', size: 'small'})
-              +checkbox({text: 'Получать спецпредложения', id: 'deals', name: 'deals', mod: 'toggle', checked: true})
-              +checkbox({text: 'Получать спецпредложения', id: 'deals2', name: 'deals', mod: 'toggle'})
-            +fieldset({title: 'like button'})
-              .separating-wrap_small
-                +like-button({value: '2'})
-                +like-button({id: 'like-inited', value: '11'})
-            +fieldset({title: 'rate button'})
-              .separating-wrap
-                +rate-button({id: 'rate-inited4'})
-                +rate-button({id: 'rate-inited5'})
+          +fieldset({title: 'toggle', size: 'small'})
+            +checkbox({text: 'Получать спецпредложения', id: 'deals', name: 'deals', mod: 'toggle', checked: true})
+            +checkbox({text: 'Получать спецпредложения', id: 'deals2', name: 'deals', mod: 'toggle'})
+          +fieldset({title: 'like button'})
+          .like-buttons-wrap
+            +like-button({value: '2'})
+            +like-button({id: 'like-inited', value: '11'})
+          +fieldset({title: 'rate button'})
+          .rate-buttons-wrap
+            +rate-button({id: 'rate-inited4'})
+            +rate-button({id: 'rate-inited5'})
         .wrapper-column
           .range-slider-wrap
             +fieldset({title: 'range slider', size: 'small', mod: 'double'})
