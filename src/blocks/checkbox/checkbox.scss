@@ -2,7 +2,13 @@
 
 .checkbox {
   display: flex;
-  align-items: center;
+  padding-top: 11px;
+  width: 90%;
+  line-height: 18px;
+}
+
+.checkbox_rich {
+  width: 100%;
   padding-top: 10px;
 }
 
@@ -37,14 +43,15 @@
 .checkbox__label_rich {
   font: vars.$rich;
   color: vars.$primary-color75;
-  padding-top: 2px;
+  align-items: flex-end;
 }
 
 .label__addition {
   margin-left: 30px;
   font: vars.$add;
   color: vars.$primary-color50;
-  padding-top: 3px;
+  padding-top: 5px;
+  line-height: 14px;
 }
 
 .checkbox__label_type_toggler {

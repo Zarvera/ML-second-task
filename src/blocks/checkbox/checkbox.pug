@@ -1,6 +1,6 @@
 mixin checkbox(attr)
   if attr.mod === 'rich'
-    .checkbox
+    div(class="checkbox checkbox_rich")
       input(
         type='checkbox'
         id=attr.id
@@ -15,7 +15,7 @@ mixin checkbox(attr)
         ) #{attr.text}
         p.label__addition #{attr.addition}
   else
-    .checkbox
+    div(class="checkbox")
       input(
         type='checkbox'
         id=attr.id
