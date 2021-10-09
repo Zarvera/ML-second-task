@@ -26,7 +26,8 @@ module.exports = {
     'landing-page': `${PATHS.src}/assets/js/landing-page.js`,
     'search-room': `${PATHS.src}/assets/js/search-room.js`,
     'room-details': `${PATHS.src}/assets/js/room-details.js`,
-    'registration': `${PATHS.src}/assets/js/registration.js`
+    'registration': `${PATHS.src}/assets/js/registration.js`,
+    'log-in': `${PATHS.src}/assets/js/log-in.js`
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
