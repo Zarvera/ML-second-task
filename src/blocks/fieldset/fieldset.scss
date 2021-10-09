@@ -27,3 +27,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.fieldset__addition {
+  font: vars.$add;
+  color: vars.$primary-color50;
+}
