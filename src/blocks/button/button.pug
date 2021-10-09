@@ -13,7 +13,10 @@ mixin button(attr)
     if(attr.isForHeader) {
       classname = classname.concat(' button_style_header')
     }
-    if(attr.isForCard) {
-      classname = classname.concat(' button_style_card')
+    if(attr.isForRegistration) {
+      classname = classname.concat(' button_style_registration')
+    }
+    if(attr.isForLogin) {
+      classname = classname.concat(' button_style_log-in')
     }
   button(type=attr.type, class=classname) #{attr.value}
