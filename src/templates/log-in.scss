@@ -1,0 +1,18 @@
+@use '../layout/layout.scss';
+@use '../blocks/log-in-card/log-in-card.scss';
+
+.log-in-page-wrap {
+  background: url('../../assets/img/registration.jpg');
+  background-position: center -70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 163px 0;
+}
+
+@media (max-width: 1440px) {
+  .log-in-page-wrap {
+    background-size: auto;
+  }
+}
