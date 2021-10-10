@@ -1,5 +1,5 @@
 mixin checkbox(attr)
-  if attr.mod === 'rich'
+  if attr.type === 'rich'
     div(class="checkbox checkbox_rich")
       input(
         type='checkbox'
@@ -14,16 +14,29 @@ mixin checkbox(attr)
           class='checkbox__label_rich'
         ) #{attr.text}
         p.label__addition #{attr.addition}
+  else if attr.type === "toggle"
+    div(class="checkbox checkbox_type_toggler")
+      input(
+        type='checkbox'
+        id=attr.id
+        name=attr.name
+        class='checkbox__box_shape_oval'
+        checked=attr.checked
+      )
+      label(
+        for=attr.id
+        class='checkbox__label_type_toggler'
+      ) #{attr.text}
   else
     div(class="checkbox")
       input(
         type='checkbox'
         id=attr.id
         name=attr.name
-        class=(attr.mod==='toggle' ? 'checkbox__box_shape_oval' : 'checkbox__box')
+        class='checkbox__box'
         checked=attr.checked
       )
       label(
         for=attr.id
-        class=(attr.mod==='toggle' ? 'checkbox__label_type_toggler' : 'checkbox__label')
+        class='checkbox__label'
       ) #{attr.text}
