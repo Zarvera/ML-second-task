@@ -15,7 +15,7 @@ mixin registration-card(attr)
     +fieldset({title: 'данные для входа в сервис'})
       +text-input({type: 'email', placeholder: 'Email'})
       +text-input({type: 'password', placeholder: 'Пароль'})
-    +checkbox({text: 'Получать спецпредложения', id: 'offers', name: 'offers', mod: 'toggle'})
+    +checkbox({text: 'Получать спецпредложения', id: 'offers', name: 'offers', type: 'toggle'})
     if attr.filledButton == "register"
       +button({type: 'submit', value: 'зарегестрироваться', style: 'submit'})
     else
